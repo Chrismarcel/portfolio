@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400|Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400|Raleway:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/solid.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/brands.min.css">
@@ -12,23 +12,23 @@
     <title>Chrismarcel</title>
 </head>
 <body>
-    <main class="hero">
+    <main id="hero" class="hero">
         <div class="hero__content">
             <p class="hero__text">
                 Hi, I’m a Software developer and UI/UX Enthusiast based in Lagos, Nigeria. 
                 Most times I’m busy building cool stuffs for the web, other times I’m building for Mobile. 
                 If I’m doing neither of those, then I’m busy trying to craft rich user interfaces.
             </p>
-            <button class="btn btn--transparent hero-cta">
+            <a href="#contact" class="btn btn--transparent hero-cta">
                 <i class="fas fa-envelope"></i> 
-                Say Hello
-            </button>
+                Get in touch
+            </a>
         </div>
         <nav class="nav">
             <img src="./images/logo.svg" class="logo" alt="Chrismarcel logo">
             <ul class="nav__menu">
                 <li>
-                    <a class="nav__link" href="#">PROFILE</a>
+                    <a class="nav__link" href="#profile">PROFILE</a>
                 </li>
                 <li>
                     <a class="nav__link" href="#">SKILLSET</a>
@@ -45,7 +45,56 @@
             </ul>
         </nav>
     </main>
-    <section></section>
+    <section id="profile" class="profile">
+        <div class="profile__portrait">
+            <h3 class="section__title">ABOUT ME</h3>
+            <div class="profile__image-card">
+                <img class="profile__image" src="./images/portrait.jpg" alt="A portrait of Chrismarcel">
+            </div>
+            <ul class="profile__links">
+                <li>
+                    <a class="profile__link" href="https://github.com/Chrismarcel" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="profile__link" href="https://linkedin.com/in/chrismarcelj" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="profile__link" href="https://angel.co/chrismarcel" target="_blank">
+                        <i class="fab fa-angellist"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="profile__link" href="https://twitter.com/Chrismarcel" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="profile__description">
+            <p>
+                Lorem ipsum dolor sit amet, sed possim quodsi expetenda ne, has ex nulla elitr. 
+                Eu quem omnesque appareat ne. Per bonorum lucilius consequuntur in. 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, sed possim quodsi expetenda ne, has ex nulla elitr. 
+                Eu quem omnesque appareat nec, per bonorum lucilius consequuntur in. 
+                Has illud quaeque te, ius appetere conclusionemque ei. Vis quis singulis argumentum at.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, sed possim quodsi expetenda ne, has ex nulla elitr. 
+                Eu quem omnesque appareat nec, per bonorum lucilius consequuntur in. 
+                Has illud quaeque te, ius appetere.
+            </p>
+            <a class="btn btn--solid download-resume" href="#">
+                Download Resume 
+                <i class="fas fa-file-download"></i>
+            </a>
+        </div>
+    </section>
     <section></section>
     <section></section>
     <section></section>
