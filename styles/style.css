@@ -17,6 +17,7 @@ body {
     padding: 0;
     font-family: 'Raleway';
     color: #072142;
+    background: #eaeaea;
 }
 
 li {
@@ -43,15 +44,22 @@ a {
     font-family: inherit;
     min-width: 200px;
     line-height: 1.5;
+    cursor: pointer;
 }
 
 .btn--solid {
     background: #3b79b3;
 }
 
-.btn--transparent {
+.btn__transparent--white {
     background: transparent;
     border: 2px solid #ffffff;
+}
+
+.btn__transparent--primary {
+    background: transparent;
+    border: 2px solid #3b79b3;
+    color: #3b79b3;
 }
 
 main, section {
@@ -73,7 +81,6 @@ main, section {
 
 .hero-cta {
     align-self: flex-start;
-    cursor: pointer;
     transition: all 400ms ease-in-out;
     position: absolute;
 }
@@ -143,23 +150,20 @@ main, section {
     grid-template-columns: 1fr 2fr;
 }
 
-.profile .section__title::after {
+.profile .section__title::before,
+.projects .section__title::before {
     content: '';
     background: #072142;
     position: absolute;
     width: 235px;
     height: 4px;
-    right: 5px;
+    left: 165px;
     bottom: 15px;
 }
 
 .profile__portrait, 
 .profile__description {
     padding: 70px;
-}
-
-.profile__portrait {
-    background: #fafafa;
 }
 
 .profile__image {
@@ -310,16 +314,20 @@ main, section {
     transition: all 500ms ease-in-out;
 }
 
+.skillset__cert-frame img {
+    transition: all 700ms ease-in-out;
+}
+
 .skillset__cert-frame:hover {
     transform: translateY(3px);
 }
 
 .skillset__cert-frame:hover img {
-    transition: all 700ms ease-in-out;
+    transform: scale(1.15);
     opacity: 0.2
 }
 
-.skillset__cert-frame:hover .btn {
+.skillset__cert-frame:hover .btn--view-details {
     opacity: 1;
 }
 
@@ -337,10 +345,100 @@ main, section {
     opacity: 0;
     background: #ffffff;
     color: #072142;
-    cursor: pointer;
+    transition: all 400ms ease-in-out;
 }
 
 .skillset__cert-frame img {
     width: 100%;
     height: auto;
+}
+
+/* Styles for Projects section */
+.projects {
+    position: relative;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project__img-wrapper {
+    cursor: pointer;
+    position: relative;
+    height: 230px;
+}
+
+.project__img-wrapper img {
+    width: 100%;
+    height: 230px;
+}
+
+.more-projects {
+    align-self: center;
+    position: relative;
+    transition: all 400ms ease-in;
+}
+
+.more-projects:hover {
+    color: #ffffff;
+}
+
+.more-projects:hover::after {
+    width: 100%;
+}
+
+.more-projects::after {
+    content: '';
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    background: #3b79b3;
+    position: absolute;
+    z-index: -1;
+    transition: all 400ms ease-in;
+}
+
+.project__details {
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    color: #ffffff;
+    background: #102e4a;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateY(30px);
+    transition: all 300ms ease-in-out;
+}
+
+.project__img-wrapper:hover .project__details {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project__details p {
+    line-height: 2;
+    letter-spacing: .02em;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.project__details a > i {
+    margin-left: 5px;
+}
+
+.project__details a {
+    color: #ffffff;
+    align-self: center;
+    text-decoration: underline;
 }
