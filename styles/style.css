@@ -610,3 +610,11 @@ textarea::placeholder {
 .form__group:not(:last-child) {
     margin-bottom: 30px;
 }
+
+/* Styles for the footer section */
+footer {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
