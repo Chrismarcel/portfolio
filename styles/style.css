@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: none;
 }
 
 html {
@@ -10,6 +11,14 @@ html {
 
 button {
     border: none;
+}
+
+input:focus, 
+button:focus, 
+textarea:focus {
+    outline: 2px solid #3b79b3;
+    outline-offset: -2px;
+    box-shadow: 0 0 2px #ddd;
 }
 
 body {
@@ -35,6 +44,12 @@ a {
     position: relative;
 }
 
+.section__title--large {
+    font-size: 38px;
+    text-align: center;
+    padding-top: 70px;
+}
+
 .btn {
     height: 70px;
     font-size: 18px;
@@ -49,6 +64,18 @@ a {
 
 .btn--solid {
     background: #3b79b3;
+    box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.25);
+}
+
+.transition--push-down {
+    transition: all 250ms ease-in;
+    position: relative;
+}
+
+.transition--push-down:hover {
+    box-shadow: none;
+    position: relative;
+    transform: translateY(3px);
 }
 
 .btn__transparent--white {
@@ -58,8 +85,8 @@ a {
 
 .btn__transparent--primary {
     background: transparent;
-    border: 2px solid #3b79b3;
-    color: #3b79b3;
+    border: 2px solid #102e4a;
+    color: #102e4a;
 }
 
 main, section {
@@ -177,16 +204,16 @@ main, section {
     justify-content: space-evenly;
 }
 
-.profile__link {
+.profile__portrait .profile__link {
     display: inherit;
     position: relative;
 }
 
-.profile__link::before {
+.profile__portrait .profile__link::before {
     left: -10px;
 }
 
-.profile__link::before {
+.profile__portrait .profile__link::before {
     content: '';
     width: 50px;
     height: 50px;
@@ -200,7 +227,7 @@ main, section {
     transition: all 450ms ease-in-out;
 }
 
-.profile__link:hover::before {
+.profile__portrait .profile__link:hover::before {
     bottom: -13px;
     left: -13px;
     opacity: 1;
@@ -211,7 +238,7 @@ main, section {
     color: #524c4c;
 }
 
-.profile__link:hover > i {
+.profile__portrait .profile__link:hover > i {
     color: #3b79b3;
 }
 
@@ -232,15 +259,6 @@ main, section {
 
 .download-resume {
     align-self: center;
-    box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.25);
-    transition: all 250ms ease-in;
-    position: relative;
-}
-
-.download-resume:hover {
-    box-shadow: none;
-    position: relative;
-    transform: translateY(3px);
 }
 
 .download-resume i {
@@ -298,7 +316,7 @@ main, section {
 }
 
 .skillset__card li:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 .skillset__cert-frame {
@@ -362,6 +380,10 @@ main, section {
     justify-content: space-between;
 }
 
+.projects > .section__title {
+    margin-bottom: 0;
+}
+
 .projects__gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -381,7 +403,7 @@ main, section {
 .more-projects {
     align-self: center;
     position: relative;
-    transition: all 400ms ease-in;
+    transition: all 300ms ease-in-out;
 }
 
 .more-projects:hover {
@@ -398,10 +420,10 @@ main, section {
     width: 0;
     top: 0;
     right: 0;
-    background: #3b79b3;
+    background: #102e4a;
     position: absolute;
     z-index: -1;
-    transition: all 400ms ease-in;
+    transition: all 300ms ease-in-out;
 }
 
 .project__details {
@@ -422,7 +444,7 @@ main, section {
 }
 
 .project__img-wrapper:hover .project__details {
-    opacity: 1;
+    opacity: .9;
     transform: translateY(0);
 }
 
@@ -433,7 +455,7 @@ main, section {
     text-align: justify;
 }
 
-.project__details a > i {
+.more-projects > i {
     margin-left: 5px;
 }
 
@@ -441,4 +463,150 @@ main, section {
     color: #ffffff;
     align-self: center;
     text-decoration: underline;
+}
+
+/* Style for the contact section */
+.contact {
+    background: #102e4a;
+    color: #ffffff;
+    font-family: 'Poppins';
+}
+
+.contact__details, 
+.contact__form {
+    padding: 70px;
+    font-size: 20px;
+}
+
+.contact__details {
+    letter-spacing: 0.02em;
+    line-height: 2.5;
+}
+
+.contact__details i {
+    color: #ffffff;
+}
+
+.contact__details p i {
+    display: inline-block;
+    width: 40px;
+}
+
+.contact__details .profile__links {
+    margin-top: 50px;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.contact__details .profile__link {
+    padding: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    transition: all 400ms ease-in-out;
+}
+
+.contact__details .profile__link:hover {
+    transform: translateY(3px);
+}   
+
+.contact__details .profile__link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 20px;
+    left: -2px;
+    background: #3b79b3;
+    border: 2px solid #3b79b3;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 50%;
+    transition: all 400ms ease-in-out;
+}
+
+.contact__details .profile__link:hover::after {
+    height: 100%;
+    opacity: 1;
+    top: -2px;
+    left: -2px;
+}
+
+.contact__text {
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form__card {
+    background: #443077;
+    box-shadow: 0px 10px 31px rgba(0, 0, 0, 0.1);
+    min-height: 65px;
+    color: #ffffff;
+    padding: 50px;
+    position: relative;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form__group {
+    position: relative;
+}
+
+.form__group * {
+    height: 55px;
+    width: 100%;
+    padding: 35px 20px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: text;
+}
+
+.form__group > *:focus + label, 
+.form__group > *:valid + label {
+    opacity: 0.7;
+    top: 3px;
+    font-size: 12px;
+}
+
+.form__group textarea {
+    height: 100px;
+    padding: 30px 20px 20px;
+}
+
+.form__group label {
+    opacity: 1;
+    color: #102e4a;
+    position: absolute;
+    padding: 0;
+    height: 0;
+    top: 18px;
+    left: 20px;
+    transition: all 400ms ease-in-out;
+}
+
+textarea::placeholder {
+    color: #102e4a;
+}
+
+.form__group .btn {
+    line-height: 1;
+    cursor: pointer;
+    padding: 20px;
+    font-size: initial;
+}
+
+.form__group:not(:last-child) {
+    margin-bottom: 30px;
 }
