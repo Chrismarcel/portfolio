@@ -824,4 +824,8 @@ footer {
         height: 280px;
         margin-bottom: 20px;
     }
+
+    .contact__form {
+        padding: 25px 0 0;
+    }
 }
