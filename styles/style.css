@@ -355,25 +355,10 @@ main, section {
     opacity: 0.2
 }
 
-.skillset__cert-frame:hover .btn--view-details {
-    opacity: 1;
-}
-
 .skillset__certs-wrapper {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-}
-
-.btn--view-details {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    background: #ffffff;
-    color: #072142;
-    transition: all 400ms ease-in-out;
 }
 
 .skillset__cert-frame img {
@@ -391,6 +376,7 @@ main, section {
 }
 
 .projects > .section__title {
+    align-self: flex-start;
     margin-bottom: 0;
 }
 
@@ -463,6 +449,10 @@ main, section {
     letter-spacing: .02em;
     font-size: 14px;
     text-align: justify;
+}
+
+.project__details i {
+    margin-left: 10px;
 }
 
 .more-projects > i {
@@ -687,11 +677,6 @@ footer {
         cursor: pointer;
     }
 
-    .hamburger:focus {
-        outline: none;
-        box-shadow: none;
-    }
-
     .hamburger > span {
         height: 2px;
         width: 7vw;
@@ -700,6 +685,7 @@ footer {
         background: #ffffff;
         margin: 20px 0 20px 20px;
         display: inherit;
+        transition: all 400ms ease-in-out;
     }
 
     .hamburger > span::before, 
@@ -722,6 +708,8 @@ footer {
     }
 
     .hamburger:focus {
+        outline: none;
+        box-shadow: none;
         position: fixed;
         right: 25px;
         top: 29px;
@@ -734,6 +722,18 @@ footer {
         opacity: 1;
         border-radius: 0;
         z-index: 10;
+    }
+
+    .hamburger:focus > span {
+        transform: rotate(225deg);
+        width: 9vw;
+    }
+
+    .hamburger:focus > span::before,
+    .hamburger:focus > span::after {
+        transform: rotate(90deg);
+        top: 0;
+        width: 9vw;
     }
 
     .hamburger:focus + .nav__menu li {
@@ -794,11 +794,6 @@ footer {
     .contact__wrapper > div,
     .form__card {
         padding: 25px;
-    }
-
-    .projects > .section__title {
-        margin-bottom: 20px;
-        align-self: flex-start;
     }
 
     .contact__details > .profile__links {
