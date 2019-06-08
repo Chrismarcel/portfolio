@@ -825,7 +825,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    .contact__form {
+    .contact__wrapper div.contact__form {
         padding: 25px 0 0;
     }
 }
