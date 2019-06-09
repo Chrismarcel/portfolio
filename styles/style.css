@@ -37,6 +37,12 @@ a {
     text-decoration: none;
 }
 
+.section__title, 
+.nav__link, 
+.skillset__category {
+    text-transform: uppercase;
+}
+
 .section__title {
     font-weight: 700;
     margin-bottom: 30px;
@@ -423,6 +429,7 @@ main, section {
 }
 
 .project__details {
+    font-size: 14px;
     position: absolute;
     top: 0;
     bottom: 0px;
@@ -431,7 +438,7 @@ main, section {
     opacity: 0;
     color: #ffffff;
     background: #102e4a;
-    padding: 25px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -447,8 +454,19 @@ main, section {
 .project__details p {
     line-height: 2;
     letter-spacing: .02em;
-    font-size: 14px;
     text-align: justify;
+}
+
+.project__stack li {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    margin-right: 2px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.project__stack li:not(:last-child) {
+    margin-bottom: 5px;
 }
 
 .project__details i {
@@ -796,6 +814,15 @@ footer {
         padding: 25px;
     }
 
+    .project__details p {
+        min-height: 90px;
+        overflow: scroll;
+    }
+
+    .projects > .section__title {
+        margin-bottom: 20px;
+    }
+
     .contact__details > .profile__links {
         width: 100%;
     }
@@ -822,5 +849,10 @@ footer {
 
     .contact__wrapper div.contact__form {
         padding: 25px 0 0;
+    }
+
+    .profile__bio {
+        font-size: 4vw;
+        text-emphasis: inherit;
     }
 }
