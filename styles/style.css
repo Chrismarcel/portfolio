@@ -97,7 +97,7 @@ a {
 }
 
 main, section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -144,7 +144,8 @@ main, section {
 
 .nav {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-top: 70px;
 }
 
 .hamburger {
@@ -390,6 +391,7 @@ main, section {
 .projects__gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 40px 0;
 }
 
 .project__img-wrapper {
@@ -801,6 +803,10 @@ footer {
     .skillset__cards,
     .skillset__certs-wrapper {
         display: block;
+    }
+
+    .projects__gallery {
+        margin: 0;
     }
 
     .profile__image {
