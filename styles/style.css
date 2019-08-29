@@ -70,8 +70,8 @@ a {
 }
 
 .btn--solid {
-    background: #3b79b3;
-    box-shadow: 0px 2px 22px rgba(0, 0, 0, 0.25);
+    background: rgba(59, 121, 179, .2);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25)
 }
 
 .transition--push-down {
@@ -317,7 +317,7 @@ main, section {
 }
 
 .skillset__card {
-    background: #443077;
+    background: rgba(59, 46, 97, 0.6);
     box-shadow: 0px 10px 31px rgba(0, 0, 0, 0.1);
     min-height: 65px;
     color: #ffffff;
@@ -570,7 +570,7 @@ main, section {
 }
 
 .form__card {
-    background: #443077;
+    background: rgba(59, 46, 97, 0.6);;
     box-shadow: 0px 10px 31px rgba(0, 0, 0, 0.1);
     min-height: 65px;
     color: #ffffff;
