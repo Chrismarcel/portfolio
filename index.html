@@ -13,11 +13,11 @@
 </head>
 <body>
     <main id="hero" class="hero">
-        <section class="hero__content">
+        <article class="hero__content">
             <p class="hero__text">
                 Hi, I’m a Front-End Engineer and UI/UX Enthusiast based in Lagos, Nigeria. 
                 Most times I’m busy building and hacking things out on the web, other times I’m building for Mobile. 
-                If I’m doing neither of those, then I’m busy crafting rich user interfaces. 
+                If I’m doing neither of those, then I’m busy trying to craft rich user interfaces. 
                 When I'm not working, I'm probably seeing a movie, playing video games or helping 
                 organize tech events.
             </p>
@@ -25,7 +25,7 @@
                 <i class="fas fa-envelope"></i> 
                 Get in touch
             </a>
-        </section>
+        </article>
         <nav class="nav">
             <img src="./images/logo.svg" class="logo" alt="Chrismarcel logo">
             <button class="hamburger">
@@ -36,7 +36,7 @@
                     <a class="nav__link" href="#profile">Profile</a>
                 </li>
                 <li>
-                    <a class="nav__link" href="#skillset">Skillset</a>
+                    <a class="nav__link" href="#skillset">Skills</a>
                 </li>
                 <li>
                     <a class="nav__link" href="#projects">Featured Projects</a>
@@ -104,11 +104,19 @@
         </div>
     </section>
     <section id="skillset" class="skillset">
-        <div class="skillset__tech">
-            <h3 class="section__title">Technologies</h3>
+        <h3 class="section__title">Skills</h3>
+        <div class="skillset__tools">
+            <p class="skillset__text">
+                Every craftsman has his tool, and here are some I work with regularly. Despite predominantly focused 
+                on the front-end part of the web, my skillset includes a variety of technologies that affords me the flexibly 
+                of working across different stages of web development.
+            </p>
             <div class="skillset__cards">
                 <div class="skillset__card">
-                    <h5 class="skillset__category">Front end</h5>
+                    <h5 class="skillset__category">
+                        <i class="fas fa-tv"></i> 
+                        Front-end
+                    </h5>
                     <ul class="skillset__list">
                         <li>- HTML & CSS</li>
                         <li>- Javascript (ES6+)</li>
@@ -120,17 +128,22 @@
                     </ul>
                 </div>
                 <div class="skillset__card">
-                    <h5 class="skillset__category">Back end</h5>
+                    <h5 class="skillset__category">
+                        <i class="fas fa-server"></i> 
+                        Back-end
+                    </h5>
                     <ul class="skillset__list">
                         <li>- Node.js</li>
                         <li>- Express</li> 
                         <li>- PHP</li>
                         <li>- Laravel</li>
-                        <li>- Rest API</li>
                     </ul>
                 </div>
                 <div class="skillset__card">
-                    <h5 class="skillset__category">Databases</h5>
+                    <h5 class="skillset__category">
+                        <i class="fas fa-database"></i> 
+                        Databases
+                    </h5>
                     <ul class="skillset__list">
                         <li>- MySQL</li>
                         <li>- PostgreSQL</li>
@@ -138,21 +151,30 @@
                     </ul>
                 </div>
                 <div class="skillset__card">
-                    <h5 class="skillset__category">Mobile Dev</h5>
+                    <h5 class="skillset__category">
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile Dev
+                    </h5>
                     <ul class="skillset__list">
                         <li>- React Native</li>
                         <li>- PWA</li>
                     </ul>
                 </div>
                 <div class="skillset__card">
-                    <h5 class="skillset__category">UI & UX</h5>
+                    <h5 class="skillset__category">
+                        <i class="fas fa-palette"></i>
+                        UI & UX
+                    </h5>
                     <ul class="skillset__list">
                         <li>- Figma</li>
                         <li>- Adobe XD</li>
                     </ul>
                 </div>
                 <div class="skillset__card">
-                    <h5 class="skillset__category">Tools</h5>
+                    <h5 class="skillset__category">
+                        <i class="fas fa-tools"></i>
+                        Tools
+                    </h5>
                     <ul class="skillset__list">
                         <li>- Git</li>
                         <li>- Travis CI</li>
@@ -166,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <div class="skillset__certs">
+        <!-- <div class="skillset__certs">
             <h3 class="section__title">Achievements</h3>
             <div class="skillset__certs-wrapper">
                 <div class="skillset__cert-frame" id="nanodegree-cert">
@@ -191,7 +213,7 @@
                     alt="Chrismarcel's Pluralsight JS Certificate">
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <section id="projects" class="projects">
         <h3 class="section__title">Featured Projects</h3>

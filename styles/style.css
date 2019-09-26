@@ -97,7 +97,7 @@ a {
 }
 
 main, section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -283,8 +283,7 @@ main, section {
 /* Styling for the skillset section */
 .skillset {
     background: #102e4a;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding: 70px;
 }
 
 .skillset .section__title {
@@ -295,20 +294,14 @@ main, section {
     background: #ffffff;
 }
 
-.skillset__tech, 
-.skillset__certs {
-    padding: 70px;
-    position: relative;
+.skillset__tools {
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 
-.skillset__tech::after {
-    content: '';
-    width: 3px;
-    height: 90%;
-    background: rgba(15, 84, 149, 0.25);
-    position: absolute;
-    right: 0;
-    top: 40px;
+.skillset__tools, 
+.skillset__text {
+    position: relative;
 }
 
 .skillset__cards {
@@ -334,8 +327,21 @@ main, section {
     margin-bottom: 20px;
 }
 
+.skillset__category i {
+    margin-right: 10px;
+}
+
 .skillset__card li:not(:last-child) {
     margin-bottom: 18px;
+}
+
+.skillset__text {
+    color: #ffffff;
+    align-self: center;
+    font-size: 22px;
+    line-height: 2;
+    padding-right: 90px;
+    text-align: justify;
 }
 
 .skillset__cert-frame {
@@ -362,12 +368,6 @@ main, section {
 .skillset__cert-frame:hover img {
     transform: scale(1.15);
     opacity: 0.2
-}
-
-.skillset__certs-wrapper {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
 }
 
 .skillset__cert-frame img {
@@ -806,8 +806,7 @@ footer {
     .skillset > div, 
     .projects__gallery, 
     .contact__wrapper,
-    .skillset__cards,
-    .skillset__certs-wrapper {
+    .skillset__cards {
         display: block;
     }
 
@@ -820,7 +819,7 @@ footer {
     }
 
     .profile > div, 
-    .skillset > div, 
+    .skillset, 
     .projects, 
     .contact__wrapper > div,
     .form__card {
@@ -842,6 +841,12 @@ footer {
 
     .project__img-wrapper {
         margin-bottom: 20px;
+    }
+
+    .skillset__text {
+        padding-right: 0;
+        font-size: 4.5vmin;
+        margin-bottom: 30px;
     }
 
     .skillset__card {
