@@ -767,6 +767,7 @@ footer {
 
     .btn {
         height: 58px;
+        font-size: 4vmin;
         line-height: 1;
     }
 
@@ -782,7 +783,7 @@ footer {
     }
 
     .section__title {
-        font-size: 5vw;
+        font-size: 5vmin;
     }
 
     .contact .section__title--large {
@@ -863,7 +864,7 @@ footer {
     }
 
     .profile__bio {
-        font-size: 4vw;
+        font-size: 4vmin;
         text-emphasis: inherit;
     }
 }
