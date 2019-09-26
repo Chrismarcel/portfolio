@@ -70,8 +70,8 @@ a {
 }
 
 .btn--solid {
-    background: rgba(59, 121, 179, .2);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25)
+    background: rgba(59, 121, 179, .4);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05)
 }
 
 .transition--push-down {
@@ -97,7 +97,7 @@ a {
 }
 
 main, section {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
 }
 
@@ -119,6 +119,7 @@ main, section {
     transition: all 400ms ease-in-out;
     top: 0;
     position: relative;
+    display: inline-block;
 }
 
 .hero-cta > i {
@@ -135,9 +136,9 @@ main, section {
 }
 
 .hero__text {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 73px;
-    width: 60%;
+    width: 66%;
     letter-spacing: .02em;
     margin-bottom: 40px;
 }
@@ -570,8 +571,7 @@ main, section {
 }
 
 .form__card {
-    background: rgba(59, 46, 97, 0.6);;
-    box-shadow: 0px 10px 31px rgba(0, 0, 0, 0.1);
+    background: rgba(59, 46, 97, 0.6);
     min-height: 65px;
     color: #ffffff;
     padding: 50px;
@@ -628,6 +628,10 @@ textarea::placeholder {
     font-size: initial;
 }
 
+.btn--solid[type="submit"] {
+    background: rgba(59, 121, 179, .9);
+}
+
 .form__group:not(:last-child) {
     margin-bottom: 30px;
 }
@@ -666,7 +670,7 @@ footer {
 
     .nav {
         order: 1;
-        margin-bottom: 25px;
+        margin-top: 40px;
     }
 
     .nav__menu {
@@ -767,13 +771,13 @@ footer {
     }
 
     .hero-cta {
-        font-size: 5vw;
+        font-size: 4vmin;
         align-self: center;
     }
 
     .hero__text {
         width: 100%;
-        font-size: 5vw;
+        font-size: 4.5vmin;
         line-height: 2.5;
     }
 
