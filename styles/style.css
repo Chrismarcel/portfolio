@@ -845,7 +845,7 @@ footer {
 
     .skillset__text {
         padding-right: 0;
-        font-size: 4vmin;
+        font-size: 4.5vmin;
         margin-bottom: 30px;
         text-align: left;
     }
@@ -871,7 +871,7 @@ footer {
     }
 
     .profile__bio {
-        font-size: 4vmin;
+        font-size: 4.5vmin;
         text-emphasis: inherit;
     }
 }
