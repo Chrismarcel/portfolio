@@ -845,8 +845,9 @@ footer {
 
     .skillset__text {
         padding-right: 0;
-        font-size: 4.5vmin;
+        font-size: 4vmin;
         margin-bottom: 30px;
+        text-align: left;
     }
 
     .skillset__card {
