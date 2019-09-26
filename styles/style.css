@@ -780,6 +780,7 @@ footer {
         width: 100%;
         font-size: 4.5vmin;
         line-height: 2.5;
+        text-align: justify;
     }
 
     .section__title {
