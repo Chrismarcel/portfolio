@@ -263,7 +263,7 @@ main, section {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .profile__description p {
@@ -344,37 +344,6 @@ main, section {
     text-align: justify;
 }
 
-.skillset__cert-frame {
-    width: 280px;
-    height: 200px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
-    border: 3px solid #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    transition: all 500ms ease-in-out;
-}
-
-.skillset__cert-frame img {
-    transition: all 700ms ease-in-out;
-}
-
-.skillset__cert-frame:hover {
-    transform: translateY(3px);
-}
-
-.skillset__cert-frame:hover img {
-    transform: scale(1.15);
-    opacity: 0.2
-}
-
-.skillset__cert-frame img {
-    width: 100%;
-    height: auto;
-}
-
 /* Styles for Projects section */
 .projects {
     position: relative;
@@ -393,6 +362,8 @@ main, section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 40px 0;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
 }
 
 .project__img-wrapper {
@@ -404,32 +375,6 @@ main, section {
 .project__img-wrapper img {
     width: 100%;
     height: 230px;
-}
-
-.more-projects {
-    align-self: center;
-    position: relative;
-    transition: all 300ms ease-in-out;
-}
-
-.more-projects:hover {
-    color: #ffffff;
-}
-
-.more-projects:hover::after {
-    width: 100%;
-}
-
-.more-projects::after {
-    content: '';
-    height: 100%;
-    width: 0;
-    top: 0;
-    right: 0;
-    background: #102e4a;
-    position: absolute;
-    z-index: -1;
-    transition: all 300ms ease-in-out;
 }
 
 .project__details {
@@ -475,10 +420,6 @@ main, section {
 
 .project__details i {
     margin-left: 10px;
-}
-
-.more-projects > i {
-    margin-left: 5px;
 }
 
 .project__details a {
@@ -827,8 +768,10 @@ footer {
     }
 
     .project__details p {
+        line-height: 1.55;
         min-height: 90px;
         overflow: scroll;
+        text-align: left;
     }
 
     .projects > .section__title {

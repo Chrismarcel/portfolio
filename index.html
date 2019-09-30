@@ -39,7 +39,7 @@
                     <a class="nav__link" href="#skillset">Skills</a>
                 </li>
                 <li>
-                    <a class="nav__link" href="#projects">Featured Projects</a>
+                    <a class="nav__link" href="#projects">Projects</a>
                 </li>
                 <li>
                     <a class="nav__link" href="#contact">Contact</a>
@@ -120,7 +120,7 @@
                     <ul class="skillset__list">
                         <li>- HTML & CSS</li>
                         <li>- Javascript (ES6+)</li>
-                        <li>- Sass</li>
+                        <li>- SASS</li>
                         <li>- Bootstrap</li> 
                         <li>- React + Redux</li>
                         <li>- Vue + VueX</li> 
@@ -188,36 +188,47 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="skillset__certs">
-            <h3 class="section__title">Achievements</h3>
-            <div class="skillset__certs-wrapper">
-                <div class="skillset__cert-frame" id="nanodegree-cert">
-                    <img 
-                    src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/certs/nanodegree-cert.jpg" 
-                    alt="Chrismarcel's Nanodegree Certificate">
-                </div>
-                <div class="skillset__cert-frame" id="alc-cert">
-                    <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/certs/alc-mentor.png" 
-                    alt="Chrismarcel's ALC Mentor Certificate">
-                </div>
-                <div class="skillset__cert-frame" id="html-cert">
-                    <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/certs/html-cert.png" 
-                    alt="Chrismarcel's Pluralsight HTML5 Certificate">
-                </div>
-                <div class="skillset__cert-frame" id="css-cert">
-                    <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/certs/css-cert.png" 
-                    alt="Chrismarcel's Pluralsight CSS Certificate">
-                </div>
-                <div class="skillset__cert-frame" id="js-cert">
-                    <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/certs/javascript-cert.png" 
-                    alt="Chrismarcel's Pluralsight JS Certificate">
-                </div>
-            </div>
-        </div> -->
     </section>
     <section id="projects" class="projects">
-        <h3 class="section__title">Featured Projects</h3>
+        <h3 class="section__title">Projects</h3>
         <div class="projects__gallery">
+            <div class="project__img-wrapper">
+                <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/callnug.png" 
+                alt="Screenshot of my portfolio homepage">
+                <div class="project__details">
+                    <p>
+                        Callnug is a smartphone mobile application for caller Identification. The Dashboard enables an 
+                        authenticated admins to collate, montitor, analyze and visualize user/call data on the Callnug platform. 
+                    </p>
+                    <ul class="project__stack">
+                        <li>React</li>
+                        <li>React Charts</li>
+                        <li>Styled Components</li>
+                        <li>Parcel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project__img-wrapper">
+                <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1569845291/portfolio/projects/blushup-dashboard.png" 
+                alt="Screenshot of Blushup's homepage">
+                <div class="project__details">
+                    <p>
+                        Blushup is a San-Francisco based company that offers the best in-store make-up and skin-care services. The Dashboard
+                        enables vendors monitor and analyze sales/bookings data. 
+                    </p>
+                    <ul class="project__stack">
+                        <li>React</li>
+                        <li>Redux</li>
+                        <li>React Charts</li>
+                        <li>SASS</li>
+                        <li>Node.js</li>
+                        <li>Webpack</li>
+                    </ul>
+                    <a href="https://blushup.com" target="_blank">
+                        Visit link <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
             <div class="project__img-wrapper">
                 <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/authorshaven.png" 
                 alt="Screenshot of authors haven homepage">
@@ -229,6 +240,7 @@
                     <ul class="project__stack">
                         <li>React</li>
                         <li>Redux</li>
+                        <li>SASS</li>
                         <li>Node.js</li>
                         <li>PostgreSQL</li>
                         <li>Sequelize (ORM)</li>
@@ -240,7 +252,7 @@
             </div>
             <div class="project__img-wrapper">
                 <img src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/ireporter.png" 
-                alt="Screenshot of IReporter homepage">
+                alt="Screenshot of I-Reporter homepage">
                 <div class="project__details">
                     <p>
                         iReporter is a platform that enables citizens report cases of corruption to the appropriate 
@@ -263,8 +275,7 @@
                 alt="Screenshot of Foodies homepage">
                 <div class="project__details">
                     <p>
-                        A platform for food lovers to review restaurants in a given neighborhood. This project was 
-                        built for the Nanodegree final challenge.
+                        A platform for food lovers to review restaurants in a given neighborhood built for the Nanodegree final challenge.
                     </p>
                     <ul class="project__stack">
                         <li>HTML / CSS</li>
@@ -283,12 +294,14 @@
                 alt="Screenshot of my portfolio homepage">
                 <div class="project__details">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, a? Dolor omnis, excepturi
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, a? Dolor omnis, excepturi.
+                        My portfolio website 😊. Yup, this one you're currently viewing
                     </p>
-                    <a href="https://chrismarcel.github.io/Konvata" target="_blank">
-                        Visit link <i class="fas fa-external-link-alt"></i>
-                    </a>
+                    <ul class="project__stack">
+                        <li>HTML / CSS</li>
+                        <li>Javascript</li>
+                        <li>Gatsby</li>
+                        <li>Netlify</li>
+                    </ul>
                 </div>
             </div>
             <div class="project__img-wrapper">
@@ -296,14 +309,14 @@
                 alt="Screenshot of Konvata app">
                 <div class="project__details">
                     <p>
-                        A Progressive Web App Currency Converter app. Being a PWA allows the user
+                        A Progressive Web App Currency Converter app that allows the user
                         to convert from one currency to another even while offline.
                     </p>
                     <ul class="project__stack">
                         <li>HTML / CSS</li>
                         <li>Javascript</li>
                         <li>Service Workers</li>
-                        <li>Dexie</li>
+                        <li>DexieJS</li>
                     </ul>
                     <a href="https://chrismarcel.github.io/Konvata" target="_blank">
                         Visit link <i class="fas fa-external-link-alt"></i>
@@ -323,7 +336,6 @@
                         <li>Javascript</li>
                         <li>PHP</li>
                         <li>MySQL</li>
-                        <li>Paystack</li>
                     </ul>
                     <a href="https://bbg.ng" target="_blank">
                         Visit link <i class="fas fa-external-link-alt"></i>
@@ -331,9 +343,6 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn__transparent--primary more-projects">
-            See more projects <i class="fas fa-arrow-right"></i>
-        </button>
     </section>
     <section id="contact" class="contact">
         <h4 class="section__title--large">I’d really love to hear from you!</h4>
