@@ -1,23 +1,25 @@
 'use strict';
 
+const selectAllElements = document.querySelectorAll.bind(document);
+const selectElement = document.querySelector.bind(document);
+const getElementNodes = (nodes) => Array.from(selectAllElements(nodes));
+
+// Handle section latching using Intersection Observer
 const observerOptions = {
     root: null,
     rootMargin: '0px',
     threshold: 0
 };
 
-const allSections = Array.from(document.querySelectorAll('section'));
-
 const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry) => {
-        const { 
-            target,
+    entries.forEach(entry => {
+        const {
             target: { 
                 previousElementSibling: prevSection
             } 
         } = entry;
 
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) {            
             const { offsetHeight: sectionHeight } = prevSection;
             const { innerHeight: viewportHeight } = window;
             const offsetTop = viewportHeight - sectionHeight;
@@ -35,6 +37,14 @@ const observer = new IntersectionObserver(entries => {
     });
 }, observerOptions);
 
-allSections.forEach(targetSection => {
+getElementNodes('section').forEach(targetSection => {
     observer.observe(targetSection);
 });
+// End Section Latching implementation
+
+// Remove smooth scroll when Contact button/link is clicked
+getElementNodes('a[href="#contact"]').forEach(node => {
+    node.addEventListener('click', (evt) => {
+        document.documentElement.style.scrollBehavior = 'auto';
+    });
+})

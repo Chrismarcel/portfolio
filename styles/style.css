@@ -589,6 +589,16 @@ textarea::placeholder {
     top: 0;
 }
 
+section:not(.latched)::before {
+    content: '';
+    width: 100%;
+    top: -7px;
+    right: 0;
+    position: absolute;
+    background: yellow;
+    height: 7px;
+}
+
 /* Styles for media queries */
 @media only screen and (max-width: 767px) {
     main, section {
@@ -597,7 +607,7 @@ textarea::placeholder {
 
     .hero {
         padding: 25px;
-        height: 100vh;
+        top: -28px;
         background-position: 80% 20%;
     }
 
