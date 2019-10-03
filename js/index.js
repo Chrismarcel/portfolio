@@ -44,7 +44,7 @@ getElementNodes('section').forEach(targetSection => {
 
 // Remove smooth scroll when Contact button/link is clicked
 getElementNodes('a[href="#contact"]').forEach(node => {
-    node.addEventListener('click', (evt) => {
+    node.addEventListener('click', () => {
         document.documentElement.style.scrollBehavior = 'auto';
     });
 })

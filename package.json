@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Repository for my portfolio website",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chrismarcel/portfolio.git"
+  },
+  "keywords": [],
+  "author": "Chrismarcel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chrismarcel/portfolio/issues"
+  },
+  "homepage": "https://github.com/Chrismarcel/portfolio#readme",
+  "dependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "prettier": "^1.18.2"
+  }
+}
