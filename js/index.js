@@ -28,7 +28,9 @@ const observer = new IntersectionObserver(entries => {
             }
         } else {
             prevSection.classList.remove('latched');
-            prevSection.style.top = '100vh';
+            if (prevSection.nodeName.toLowerCase() === 'section') {
+                prevSection.style.top = '100vh';
+            }
         }
     });
 }, observerOptions);
