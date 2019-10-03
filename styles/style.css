@@ -599,6 +599,16 @@ section:not(.latched)::before {
     height: 7px;
 }
 
+.credits {
+    margin-top: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.credits i {
+    color: yellow;
+}
+
 /* Styles for media queries */
 @media only screen and (max-width: 767px) {
     main, section {
@@ -607,7 +617,7 @@ section:not(.latched)::before {
 
     .hero {
         padding: 25px;
-        top: -28px;
+        top: -6vmin;
         background-position: 80% 20%;
     }
 
@@ -830,5 +840,12 @@ section:not(.latched)::before {
     .profile__bio {
         font-size: 4.5vmin;
         text-emphasis: inherit;
+    }
+
+    .credits {
+        margin: 0;
+        padding: 25px;
+        font-size: 4vmin;
+        text-align: center;
     }
 }

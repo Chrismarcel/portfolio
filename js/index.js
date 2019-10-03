@@ -4,11 +4,12 @@ const selectAllElements = document.querySelectorAll.bind(document);
 const selectElement = document.querySelector.bind(document);
 const getElementNodes = (nodes) => Array.from(selectAllElements(nodes));
 
-// Handle section latching using Intersection Observer
+// Handle section latching feature using Intersection Observer
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.05
+    threshold: [0.05, 0.15],
+    delay: 100
 };
 
 const observer = new IntersectionObserver(entries => {
@@ -19,16 +20,16 @@ const observer = new IntersectionObserver(entries => {
             } 
         } = entry;
 
-        if (entry.isIntersecting) {            
+        if (entry.isIntersecting) {   
             const { offsetHeight: sectionHeight } = prevSection;
             const { innerHeight: viewportHeight } = window;
-            const offsetTop = viewportHeight - sectionHeight;
+            const offsetTop = viewportHeight - sectionHeight - (0.05 * viewportHeight);
             
             if (prevSection.nodeName.toLowerCase() === 'section') {
                 prevSection.classList.add('latched');
                 prevSection.style.top = `${offsetTop}px`;
             }
-        } else {
+        } else {      
             prevSection.classList.remove('latched');
             if (prevSection.nodeName.toLowerCase() === 'section') {
                 prevSection.style.top = '100vh';
@@ -40,7 +41,7 @@ const observer = new IntersectionObserver(entries => {
 getElementNodes('section').forEach(targetSection => {
     observer.observe(targetSection);
 });
-// End Section Latching implementation
+// End Section latching implementation
 
 // Remove smooth scroll when Contact button/link is clicked
 getElementNodes('a[href="#contact"]').forEach(node => {
@@ -48,3 +49,8 @@ getElementNodes('a[href="#contact"]').forEach(node => {
         document.documentElement.style.scrollBehavior = 'auto';
     });
 })
+
+
+// Update copyright year
+const copyrightYear = document.createTextNode(new Date().getFullYear());
+selectElement('.credits').appendChild(copyrightYear);
