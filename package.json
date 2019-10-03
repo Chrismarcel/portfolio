@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/Chrismarcel/portfolio.git"
   },
-  "keywords": [],
+  "keywords": ["portfolio", "profile", "html", "css", "js", "responsive"],
   "author": "Chrismarcel",
   "license": "MIT",
   "bugs": {
