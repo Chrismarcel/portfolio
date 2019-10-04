@@ -434,7 +434,17 @@ main, section {
 .project__details a {
     color: #ffffff;
     align-self: center;
-    text-decoration: underline;
+    position: relative;
+}
+
+.project__details a:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1.5px;
+    background: #ffffff;
+    left: 0;
+    bottom: -3.5px;
 }
 
 /* Style for the contact section */
