@@ -490,34 +490,15 @@ main, section {
     justify-content: center;
     position: relative;
     z-index: 10;
-    transition: all 400ms ease-in-out;
+    transform: translateY(0);
+    transition: all 400ms ease-in;
 }
 
 .contact__details .profile__link:hover {
     transform: translateY(3px);
-}   
-
-.contact__details .profile__link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0;
-    top: 20px;
-    left: -2px;
+    transition: all 400ms ease-in;
     background: #3b79b3;
     border: 2px solid #3b79b3;
-    border-radius: inherit;
-    z-index: -1;
-    opacity: 0;
-    border-radius: 50%;
-    transition: all 400ms ease-in-out;
-}
-
-.contact__details .profile__link:hover::after {
-    height: 100%;
-    opacity: 1;
-    top: -2px;
-    left: -2px;
 }
 
 .contact__text {
@@ -618,7 +599,7 @@ section:not(.latched)::before {
 }
 
 .credits i {
-    color: yellow;
+    color: #ff9d00;
 }
 
 /* Styles for media queries */
