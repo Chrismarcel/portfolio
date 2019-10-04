@@ -617,8 +617,11 @@ section:not(.latched)::before {
 
     .hero {
         padding: 25px;
-        top: -6vmin;
         background-position: 80% 20%;
+    }
+
+    .hero__text {
+        margin-bottom: 4vmin;
     }
 
     .hero__content {
@@ -635,7 +638,8 @@ section:not(.latched)::before {
 
     .nav {
         order: 1;
-        margin-top: 40px;
+        margin-top: 5vw;
+        margin-bottom: 4vw;
     }
 
     .nav__menu {
@@ -665,6 +669,7 @@ section:not(.latched)::before {
         display: block;
         background: transparent;
         cursor: pointer;
+        position: relative;
     }
 
     .hamburger > span {
@@ -673,28 +678,34 @@ section:not(.latched)::before {
         position: relative;
         align-self: center;
         background: #ffffff;
-        margin: 20px 0 20px 20px;
         display: inherit;
-        transition: all 400ms ease-in-out;
     }
 
-    .hamburger > span::before, 
-    .hamburger > span::after {
-        content: '';
+    .hamburger > span:nth-child(2) {
+        left: 0;
+        opacity: 1;
+        transition: all 400ms ease-out;
+    }
+
+    .hamburger > span:nth-child(1), 
+    .hamburger > span:nth-child(3){
         height: inherit;
-        position: absolute;
-        background: inherit;
         right: 0;
+        height: 2px;
+        position: relative;
+        margin-left: auto;
     }
 
-    .hamburger > span::before {
-        top: -10px;
-        width: 9vw;
-    }
-
-    .hamburger > span::after {
-        bottom: -10px;
+    .hamburger > span:nth-child(1) {
+        top: 13px;
         width: 5vw;
+        transition: all 400ms ease-in;
+    }
+
+    .hamburger > span:nth-child(3) {
+        bottom: 13px;
+        width: 5vw;
+        transition: all 400ms ease-in;
     }
 
     .hamburger:focus {
@@ -702,8 +713,12 @@ section:not(.latched)::before {
         box-shadow: none;
         position: fixed;
         right: 25px;
-        top: 29px;
         z-index: 1000;
+        height: 50px;
+    }
+
+    .hamburger:focus > span {
+        width: 9vw;
     }
 
     .hamburger:focus + .nav__menu {
@@ -714,16 +729,20 @@ section:not(.latched)::before {
         z-index: 10;
     }
 
-    .hamburger:focus > span {
-        transform: rotate(225deg);
-        width: 9vw;
+    .hamburger:focus > span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 2px;
+    }
+    
+    .hamburger:focus > span:nth-child(2) {
+        left: -20px;
+        opacity: 0;
+        transition: all 400ms ease-in;
     }
 
-    .hamburger:focus > span::before,
-    .hamburger:focus > span::after {
-        transform: rotate(90deg);
-        top: 0;
-        width: 9vw;
+    .hamburger:focus > span:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 2px;
     }
 
     .hamburger:focus + .nav__menu li {
