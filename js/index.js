@@ -37,7 +37,7 @@ selectElement('.credits').appendChild(copyrightYear);
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: [0, 0.05, 0.8],
+    threshold: 0,
     delay: 100
 };
 
