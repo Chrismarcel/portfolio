@@ -2,10 +2,10 @@
 
 const selectAllElements = document.querySelectorAll.bind(document);
 const selectElement = document.querySelector.bind(document);
-const getElementNodes = (nodes) => Array.from(selectAllElements(nodes));
+const getNodesList = (nodes) => Array.from(selectAllElements(nodes));
 
 // Remove smooth scroll when Contact button/link is clicked
-getElementNodes('a[href="#contact"]').forEach(node => {
+getNodesList('a[href="#contact"]').forEach(node => {
     node.addEventListener('click', () => {
         document.documentElement.style.scrollBehavior = 'auto';
     });
@@ -37,28 +37,27 @@ selectElement('.credits').appendChild(copyrightYear);
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.05,
+    threshold: [0, 0.05, 0.8],
     delay: 100
 };
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const {
-            target: { 
+            target: {
                 previousElementSibling: prevSection
-            } 
+            }
         } = entry;
 
         if (entry.isIntersecting) {   
             const { offsetHeight: sectionHeight } = prevSection;
             const { innerHeight: viewportHeight } = window;
             const offsetTop = viewportHeight - sectionHeight - (0.05 * viewportHeight);
-            
             if (prevSection.nodeName.toLowerCase() === 'section') {
                 prevSection.classList.add('latched');
                 prevSection.style.top = `${offsetTop}px`;
             }
-        } else {      
+        } else {
             prevSection.classList.remove('latched');
             if (prevSection.nodeName.toLowerCase() === 'section') {
                 prevSection.style.top = '100vh';
@@ -67,7 +66,15 @@ const observer = new IntersectionObserver(entries => {
     });
 }, observerOptions);
 
-getElementNodes('section').forEach(targetSection => {
+window.onscroll = () => {
+    if (window.scrollY >= (0.8 * window.innerHeight)) {
+        selectElement('.nav').classList.add('sticky-nav');
+    } else {
+        selectElement('.nav').classList.remove('sticky-nav');
+    }
+}
+
+getNodesList('section').forEach(targetSection => {
     observer.observe(targetSection);
 });
 // End Section latching implementation
