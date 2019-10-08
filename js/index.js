@@ -68,7 +68,7 @@ const observer = new IntersectionObserver(entries => {
 
 // Handle navigation bar transition on scroll
 window.onscroll = () => {
-    if (window.scrollY >= (0.85 * window.innerHeight)) {
+    if (window.scrollY >= (0.82 * window.innerHeight)) {
         selectElement('.nav').classList.add('sticky-nav');
     } else {
         selectElement('.nav').classList.remove('sticky-nav');

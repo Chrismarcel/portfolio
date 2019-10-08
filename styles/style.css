@@ -37,6 +37,19 @@ a {
     text-decoration: none;
 }
 
+.link--underline {
+    position: relative;
+}
+
+.link--underline::after {
+    content: '';
+    position: absolute;
+    height: 1.5px;
+    background: #ffffff;
+    left: 0;
+    bottom: -3.5px;
+}
+
 .section__title, 
 .nav__link, 
 .skillset__category {
@@ -71,6 +84,7 @@ a {
     font-family: inherit;
     min-width: 200px;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn--solid {
@@ -203,10 +217,6 @@ section:not(.latched)::before {
     transition: width 300ms ease-in;
 }
 
-.hamburger {
-    display: none;
-}
-
 .logo {
     width: 50px;
     align-self: flex-start;
@@ -249,7 +259,9 @@ section:not(.latched)::before {
     background: transparent;
     cursor: pointer;
     position: relative;
-    width: 50px;
+    min-width: 50px;
+    padding: 15px;
+    margin-right: -15px;
 }
 
 .hamburger > span {
@@ -359,6 +371,14 @@ section:not(.latched)::before {
     flex-direction: column;
 }
 
+.profile__bio a {
+    color: #ffffff;
+}
+
+.profile__bio a::after {
+    width: 100%;
+}
+
 .profile__image {
     box-shadow: 6px 11px 13px rgba(7, 33, 66, 0.16);
     border-radius: 10px;
@@ -414,8 +434,16 @@ section:not(.latched)::before {
     text-align: justify;
 }
 
+.profile__description p,
+.skillset__text {
+    word-spacing: 0.08em;
+}
+
 .download-resume {
     align-self: center;
+    background: rgb(59, 121, 179);
+    margin-top: 40px;
+    display: block;
 }
 
 .download-resume i {
@@ -553,17 +581,10 @@ section:not(.latched)::before {
 .project__details a {
     color: #ffffff;
     align-self: center;
-    position: relative;
 }
 
 .project__details a:after {
-    content: '';
-    position: absolute;
     width: calc(100% - 30px);
-    height: 1.5px;
-    background: #ffffff;
-    left: 0;
-    bottom: -3.5px;
 }
 
 /* Style for the contact section */
@@ -820,6 +841,12 @@ textarea::placeholder {
 
     .profile__description {
         font-size: 20px;
+        padding: 123px 70px;
+    }
+
+    .prrofile__description p,
+    .skillset__tools p {
+        word-spacing: 0.2em;
     }
     
     .skillset {
@@ -920,6 +947,7 @@ textarea::placeholder {
 
     .credits {
         margin-top: 30px;
+        padding: 0;
         font-size: 18px;
         text-align: left;
     }
