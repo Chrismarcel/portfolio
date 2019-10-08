@@ -55,7 +55,7 @@ const observer = new IntersectionObserver(entries => {
             const offsetTop = viewportHeight - sectionHeight - (0.05 * viewportHeight);
             if (prevSection.nodeName.toLowerCase() === 'section') {
                 prevSection.classList.add('latched');
-                prevSection.style.top = `${offsetTop}px`;
+                prevSection.style.top = `${offsetTop + 25}px`;
             }
         } else {
             prevSection.classList.remove('latched');
@@ -66,8 +66,9 @@ const observer = new IntersectionObserver(entries => {
     });
 }, observerOptions);
 
+// Handle navigation bar transition on scroll
 window.onscroll = () => {
-    if (window.scrollY >= (0.8 * window.innerHeight)) {
+    if (window.scrollY >= (0.85 * window.innerHeight)) {
         selectElement('.nav').classList.add('sticky-nav');
     } else {
         selectElement('.nav').classList.remove('sticky-nav');
