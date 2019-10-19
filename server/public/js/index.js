@@ -66,6 +66,11 @@ const observer = new IntersectionObserver(entries => {
     });
 }, observerOptions);
 
+getNodesList('section').forEach(targetSection => {
+    observer.observe(targetSection);
+});
+// End Section latching implementation
+
 // Handle navigation bar transition on scroll
 window.onscroll = () => {
     if (window.scrollY >= (0.70 * window.innerHeight)) {
@@ -75,7 +80,3 @@ window.onscroll = () => {
     }
 }
 
-getNodesList('section').forEach(targetSection => {
-    observer.observe(targetSection);
-});
-// End Section latching implementation

@@ -3,11 +3,22 @@
   "version": "1.0.0",
   "description": "Repository for my portfolio website",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chrismarcel/portfolio.git"
   },
-  "keywords": ["portfolio", "profile", "html", "css", "js", "responsive"],
+  "keywords": [
+    "portfolio",
+    "profile",
+    "html",
+    "css",
+    "js",
+    "responsive"
+  ],
   "author": "Chrismarcel",
   "license": "MIT",
   "bugs": {
@@ -15,8 +26,14 @@
   },
   "homepage": "https://github.com/Chrismarcel/portfolio#readme",
   "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "dotenv": "^8.2.0",
     "eslint": "^6.5.1",
     "eslint-config-standard": "^14.1.0",
+    "inert": "^5.1.3",
     "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }
