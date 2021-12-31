@@ -137,8 +137,14 @@ getNodesList('.tabs__tools .tab__btn').forEach((tabItem, _, nodeList) =>
 )
 
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    selectElement('#preloader').classList.add('done')
-    selectElement('body').removeAttribute('data-preloaded')
-  }, 1600)
+  new Promise(resolve => {
+    setTimeout(() => {
+      selectElement('#preloader').classList.add('done')
+      selectElement('body').removeAttribute('data-preloaded')
+      resolve()
+    }, 1600)
+  }).then(() => {
+    // remove preloader node 1s after preloader is done
+    setTimeout(() => selectElement('#preloader').remove(), 1000)
+  })
 })
