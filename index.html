@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400|Raleway:400,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;600;700&family=Source+Serif+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -20,538 +22,259 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/brands.min.css"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/app.css" />
     <title>Chrismarcel</title>
   </head>
   <body>
     <nav class="nav">
-      <img src="./images/logo.svg" class="logo" alt="Chrismarcel logo" />
-      <button class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav__menu">
-        <li>
-          <a class="nav__link" href="#profile">Profile</a>
-        </li>
-        <li>
-          <a class="nav__link" href="#skillset">Skills</a>
-        </li>
-        <li>
-          <a class="nav__link" href="#projects">Projects</a>
-        </li>
-        <li>
-          <a class="nav__link" href="#contact">Contact</a>
-        </li>
-        <li>
-          <a class="nav__link" href="#">Blog</a>
-        </li>
-      </ul>
+      <div class="container nav__inner">
+        <img src="/assets/images/logo.svg" class="logo" alt="Chrismarcel logo" />
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__menu">
+          <li>
+            <a class="nav__link" href="#profile">Profile</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#skillset">Skills</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <main id="hero" class="hero">
-      <article class="hero__content">
-        <p class="hero__text">
-          Hi, I’m a Software Developer and UI/UX Enthusiast based in Lagos,
-          Nigeria. Most times I’m busy building and hacking things out on the
-          web and on mobile. Other times, I’m busy trying to craft rich user
-          interfaces.
-        </p>
-        <a href="#contact" class="btn btn__transparent--white hero-cta">
-          <i class="fas fa-envelope"></i>
-          Get in touch
-        </a>
-      </article>
-    </main>
-    <section id="profile" class="profile">
-      <div class="profile__portrait">
-        <h3 class="section__title">About me</h3>
-        <div class="profile__image-card">
+      <div class="container hero__content--wrapper">
+        <article class="hero__content">
+          <div>
+            <p class="hero__text">
+              Hello! 👋
+            </p>
+            <p class="hero__text hero__text--lg">I'm Chrismarcel.</p>
+            <p class="hero__text hero__text--lg hero__text--gradient">
+              I build stuff on the web.
+            </p>
+          </div>
+          <p class="hero__text">
+            I'm a Front-End Software Engineer based in Lagos, Nigeria, specialized
+            in building exceptional user interfaces and experiences.
+          </p>
+          <a href="#contact" class="btn btn--solid hero-cta">
+            <i class="fas fa-envelope"></i>
+            <span>Get in touch</span>
+          </a>
+        </article>
+        <figure class="profile__image-wrapper">
           <img
             class="profile__image"
-            src="./images/portrait.jpg"
+            src="/assets/images/portrait.jpg"
             alt="A portrait of Chrismarcel"
           />
-        </div>
-        <ul class="profile__links">
+        </figure>
+      </div>
+    </main>
+    <section id="profile">
+      <div class="profile container">
+        <h3 class="section__title">About me</h3>
+        <!-- <ul class="profile__links">
           <li>
-            <a
-              class="profile__link"
-              href="https://github.com/Chrismarcel"
-              target="_blank"
-            >
+            <a class="profile__link" href="https://github.com/Chrismarcel" target="_blank">
               <i class="fab fa-github"></i>
             </a>
           </li>
           <li>
-            <a
-              class="profile__link"
-              href="https://linkedin.com/in/chrismarcelj"
-              target="_blank"
-            >
+            <a class="profile__link" href="https://linkedin.com/in/chrismarcelj" target="_blank">
               <i class="fab fa-linkedin-in"></i>
             </a>
           </li>
           <li>
-            <a
-              class="profile__link"
-              href="https://angel.co/chrismarcel"
-              target="_blank"
-            >
-              <i class="fab fa-angellist"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              class="profile__link"
-              href="https://twitter.com/Chrismarcel"
-              target="_blank"
-            >
+            <a class="profile__link" href="https://twitter.com/Chrismarcel" target="_blank">
               <i class="fab fa-twitter"></i>
             </a>
           </li>
-        </ul>
-        <a
-          href="https://bit.ly/chrismarcel-resume"
-          class="btn btn--solid download-resume transition--push-down"
-        >
-          Download Resume
-          <i class="fas fa-file-download"></i>
-        </a>
-      </div>
-      <div class="profile__description">
-        <div class="profile__bio">
-          <p>
-            I'm Christopher James, a Software Developer in Lagos Nigeria with
-            about 2+ years of experience working with web technologies.
-            Currently, I work at
-            <a class="link--underline" target="_blank" href="https://andela.com"
-              >Andela</a
-            >
-            where I help build amazing products used both in-house and
-            externally.
-          </p>
-          <p>
-            Peculiarly keen on working on the Front-end side of the web, I enjoy
-            building responsive and user-friendly interfaces using modern web
-            technologies. I'm also skilled in using design tools such as Figma
-            to design interfaces and also seamlessly convert complex design to
-            corresponding pixel-perfect front-end components.
-          </p>
-          <p>
-            Off my PC, you'd catch seeing a movie, playing video games or
-            helping organize tech events. I also enjoy providing mentorship to
-            upcoming developers either by writing, speaking or helping
-            organizing tech events.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="skillset" class="skillset">
-      <h3 class="section__title">Skills</h3>
-      <div class="skillset__tools">
-        <p class="skillset__text">
-          Every craftsman has his tool, and here are some I work with regularly.
-          Despite predominantly focused on the front-end part of the web, my
-          skillset includes a variety of technologies that affords me the
-          flexibly of working across different stages of web development.
-        </p>
-        <div class="skillset__cards">
-          <div class="skillset__card">
-            <h5 class="skillset__category">
-              <i class="fas fa-tv"></i>
-              Front-end
-            </h5>
-            <ul class="skillset__list">
-              <li>- HTML & CSS</li>
-              <li>- Javascript (ES6+)</li>
-              <li>- SASS</li>
-              <li>- Bootstrap</li>
-              <li>- React + Redux</li>
-              <li>- Vue + VueX</li>
-              <li>- JQuery</li>
-            </ul>
-          </div>
-          <div class="skillset__card">
-            <h5 class="skillset__category">
-              <i class="fas fa-server"></i>
-              Back-end
-            </h5>
-            <ul class="skillset__list">
-              <li>- Node.js</li>
-              <li>- Express</li>
-              <li>- PHP</li>
-              <li>- Laravel</li>
-            </ul>
-          </div>
-          <div class="skillset__card">
-            <h5 class="skillset__category">
-              <i class="fas fa-database"></i>
-              Databases
-            </h5>
-            <ul class="skillset__list">
-              <li>- MySQL</li>
-              <li>- PostgreSQL</li>
-              <li>- Mongo DB</li>
-            </ul>
-          </div>
-          <div class="skillset__card">
-            <h5 class="skillset__category">
-              <i class="fas fa-mobile-alt"></i>
-              Mobile Dev
-            </h5>
-            <ul class="skillset__list">
-              <li>- React Native</li>
-              <li>- PWA</li>
-            </ul>
-          </div>
-          <div class="skillset__card">
-            <h5 class="skillset__category">
-              <i class="fas fa-palette"></i>
-              UI & UX
-            </h5>
-            <ul class="skillset__list">
-              <li>- Figma</li>
-              <li>- Adobe XD</li>
-            </ul>
-          </div>
-          <div class="skillset__card">
-            <h5 class="skillset__category">
-              <i class="fas fa-tools"></i>
-              Tools
-            </h5>
-            <ul class="skillset__list">
-              <li>- Git</li>
-              <li>- Travis CI</li>
-              <li>- Circle CI</li>
-              <li>- Heroku</li>
-              <li>- Jest</li>
-              <li>- Mocha</li>
-              <li>- Nightwatch</li>
-              <li>- Postman</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="projects">
-      <h3 class="section__title">Projects</h3>
-      <div class="projects__gallery">
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/callnug.png"
-            alt="Screenshot of Callnug dashboard"
-          />
-          <div class="project__details">
-            <p>
-              Callnug is a smartphone mobile application for caller
-              Identification. The Dashboard provides an interface for management
-              to monitor, analyze and visualize user/call data on the Callnug
-              platform.
-            </p>
-            <ul class="project__stack">
-              <li>React</li>
-              <li>React Charts</li>
-              <li>Styled Components</li>
-              <li>Parcel</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1569845291/portfolio/projects/blushup-dashboard.png"
-            alt="Screenshot of Blushup dashboard"
-          />
-          <div class="project__details">
-            <a
-              class="link--underline"
-              href="https://blushup.com"
-              target="_blank"
-            >
-              Blushup Dashboard <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              Blushup is a San-Francisco based company that offers the best
-              in-store make-up and skin-care services. The Dashboard helps
-              vendors to manage sales/bookings.
-            </p>
-            <ul class="project__stack">
-              <li>React</li>
-              <li>Redux</li>
-              <li>React Charts</li>
-              <li>SASS</li>
-              <li>Node.js</li>
-              <li>Webpack</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1570539258/portfolio/projects/dairynomics.png"
-            alt="Screenshot of Dairynomics livestock listing page"
-          />
-          <div class="project__details">
-            <a
-              class="link--underline"
-              href="https://cowsoko.com"
-              target="_blank"
-            >
-              Cowsoko - Dairynomics <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              Cowsoko is a Kenyan based company that connects farmers to
-              livestock markets and provides them access to physical
-              consultants/experts.
-            </p>
-            <ul class="project__stack">
-              <li>Vue</li>
-              <li>VueX</li>
-              <li>Typescript</li>
-              <li>PostgreSQL</li>
-              <li>Sequelize ORM</li>
-              <li>Node.js</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/authorshaven.png"
-            alt="Screenshot of authors haven homepage"
-          />
-          <div class="project__details">
-            <a
-              class="link--underline"
-              href="https://authorshaven-client.herokuapp.com"
-              target="_blank"
-            >
-              Authors Haven <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              Authors Haven is an online community for avid readers and authors.
-              Users can read, publish and share articles.
-            </p>
-            <ul class="project__stack">
-              <li>React</li>
-              <li>Redux</li>
-              <li>SASS</li>
-              <li>Node.js</li>
-              <li>PostgreSQL</li>
-              <li>Sequelize ORM</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/ireporter.png"
-            alt="Screenshot of I-Reporter homepage"
-          />
-          <div class="project__details">
-            <a
-              class="link--underline"
-              href="https://ireporter-react.herokuapp.com"
-              target="_blank"
-            >
-              I-Reporter <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              I-Reporter is a platform that enables citizens report cases of
-              corruption to the appropriate government authorities.
-            </p>
-            <ul class="project__stack">
-              <li>React</li>
-              <li>Redux</li>
-              <li>Node.js</li>
-              <li>PostgreSQL</li>
-              <li>Webpack</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/foodies.png"
-            alt="Screenshot of Foodies homepage"
-          />
-          <div class="project__details">
-            <a
-              class="link--underline"
-              href="https://chrismarcel.github.io/foodies"
-              target="_blank"
-            >
-              Foodies <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              A platform for food lovers to review restaurants in a given
-              neighborhood built for the Nanodegree final challenge.
-            </p>
-            <ul class="project__stack">
-              <li>HTML / CSS</li>
-              <li>Javascript</li>
-              <li>Service Workers</li>
-              <li>Indexed DB</li>
-              <li>Rest API</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/portfolio.png"
-            alt="Screenshot of my portfolio homepage"
-          />
-          <div class="project__details">
-            <a class="link--underline" href="#hero" target="_blank">
-              Portfolio Website <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              My portfolio website 😊. Yup, this one you're currently viewing
-            </p>
-            <ul class="project__stack">
-              <li>HTML / CSS</li>
-              <li>Javascript</li>
-              <li>Gatsby</li>
-              <li>HapiJs</li>
-              <li>Netlify</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/konvata.png"
-            alt="Screenshot of Konvata app"
-          />
-          <div class="project__details">
-            <a
-              class="link--underline"
-              href="https://chrismarcel.github.io/Konvata"
-              target="_blank"
-            >
-              Konvata <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              A Progressive Web App Currency Converter app that allows the user
-              to convert from one currency to another even while offline.
-            </p>
-            <ul class="project__stack">
-              <li>HTML / CSS</li>
-              <li>Javascript</li>
-              <li>DexieJS</li>
-              <li>Service Workers</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project__img-wrapper">
-          <img
-            src="https://res.cloudinary.com/myopinion-ng/image/upload/c_scale,q_70,w_500/v1560039094/portfolio/projects/bbg.png"
-            alt="Screenshot of BBG Nigeria homepage"
-          />
-          <div class="project__details">
-            <a class="link--underline" href="https://bbg.ng" target="_blank">
-              BBG.NG <i class="fas fa-external-link-alt"></i>
-            </a>
-            <p>
-              An online platform for a closed user group of Golfers in Lagos,
-              Nigeria. Members can book and manage their games using the
-              platform.
-            </p>
-            <ul class="project__stack">
-              <li>HTML / CSS</li>
-              <li>Javascript</li>
-              <li>PHP</li>
-              <li>MySQL</li>
-            </ul>
+        </ul> -->
+        <div class="container__inner">
+          <div class="profile__description">
+            <div class="profile__bio__wrapper">
+              <article class="profile__bio">
+                <p>
+                  I'm Chrismarcel James, a Front-End Software Engineer in Lagos, Nigeria with about 4+ years
+                  of professional experience working with various web technologies.
+                </p>
+                <p>
+                  With core interest in working on the Front-end side of the web, I enjoy building
+                  responsive and user-friendly interfaces using modern web technologies. I'm also
+                  skilled in using design tools such as Figma to design interfaces and also
+                  seamlessly convert designs to pixel-perfect user experiences.
+                </p>
+              </article>
+              <a
+                href="https://bit.ly/chrismarcel-resume"
+                class="btn btn--solid download-resume transition--push-down"
+              >
+                Download Resume
+                <i class="fas fa-file-download"></i>
+              </a>
+            </div>
+            <div class="profile__experience">
+              <h3 class="section__subheader">Work Experience</h3>
+              <div class="tabs-wrapper tabs__experience" data-tabs="experiences-tabs">
+                <ul role="tablist">
+                  <li class="tab__item" id data-active="true" role="presentation">
+                    <button class="tab__btn" type="button" data-active="true" data-tab="tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
+                      HomeVision Inc.
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
+                      ColorElephant
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
+                      Fiddler
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
+                      Andela
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-5" role="tab" aria-controls="tab-5" aria-selected="false">
+                      Icojon
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab__content-wrapper">
+                  <div class="tab__content" data-active="true" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                    <p class="company-role">Software Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://homevision.co" class="company-name">HomeVision</a></p>
+                    <span class="company-duration">Sep 2020 - Present</span>
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                    <p class="company-role">Front-End Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://colorelephant.com/" class="company-name">ColorElephant</a></p>
+                    <span class="company-duration">Dec 2019 - Aug 2020</span>
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                    <p class="company-role">Front-End Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://fiddler.ai" class="company-name">Fiddler</a></p>
+                    <span class="company-duration">Jan 2020 - Apr 2020 (Contract)</span>
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-4" role="tabpanel" aria-labelledby="tab-3">
+                    <p class="company-role">Software Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://andela.com" class="company-name">Andela</a></p>
+                    <span class="company-duration">Feb 2019 - Feb 2020</span>
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
+                    <p class="company-role">Web Developer @ <a target="_blank" rel="noopener noreferrer" href="https://icojon.ng" class="company-name">Icojon</a></p>
+                    <span class="company-duration">Oct 2017 - Jan 2019</span>
+                  </div>
+                </div>
+              </div>
+              <h3 class="section__subheader">Tools I've worked with</h3>
+              <div class="tabs-wrapper tabs__tools" data-tabs="tools-tabs">
+                <ul role="tablist">
+                  <li class="tab__item" id data-active="true" role="presentation">
+                    <button class="tab__btn" type="button" data-active="true" data-tab="tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
+                      Design
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
+                      Front-End
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
+                      Back-End
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
+                      Databases
+                    </button>
+                  </li>
+                  <li class="tab__item" data-active="false" role="presentation">
+                    <button class="tab__btn type="button" data-active="false" data-tab="tab-5" role="tab" aria-controls="tab-5" aria-selected="false">
+                      Tooling
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab__content-wrapper">
+                  <div class="tab__content" data-active="true" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-4" role="tabpanel" aria-labelledby="tab-3">
+                  </div>
+                  <div class="tab__content" data-active="false" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact" class="contact">
-      <h4 class="section__title--large">I’d really love to hear from you!</h4>
-      <div class="contact__wrapper">
-        <div class="contact__details">
-          <p class="contact__text">
-            Do you have any questions or enquiries or would you like a quick
-            chat? Perhaps you would like to discuss exciting ideas, projects and
-            opportunities with me? Feel free to reach out to using the contact
-            form or link up on social media using any of the links listed below.
-          </p>
-          <p class="contact__phone">
-            <i class="fas fa-mobile-alt"></i> (234) 703 968 6973
-          </p>
-          <p class="contact__email">
-            <i class="fas fa-envelope"></i> cmarcelj@gmail.com
-          </p>
-          <ul class="profile__links">
-            <li>
-              <a
-                class="profile__link"
-                href="https://github.com/Chrismarcel"
-                target="_blank"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="profile__link"
-                href="https://linkedin.com/in/chrismarcelj"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="profile__link"
-                href="https://angel.co/chrismarcel"
-                target="_blank"
-              >
-                <i class="fab fa-angellist"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                class="profile__link"
-                href="https://twitter.com/Chrismarcel"
-                target="_blank"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="contact__form">
-          <div class="form__card">
-            <form action="">
-              <div class="form__group">
-                <input type="text" id="name" required />
-                <label for="name">Your Name</label>
-              </div>
-              <div class="form__group">
-                <input type="text" id="email" type="email" required />
-                <label for="email">Your Email</label>
-              </div>
-              <div class="form__group">
-                <input type="text" id="subject" required />
-                <label for="subject">Message Subject</label>
-              </div>
-              <div class="form__group">
-                <textarea type="text" id="message" required></textarea>
-                <label for="message">Your Message</label>
-              </div>
-              <div class="form__group">
-                <button
-                  class="btn btn--solid transition--push-down"
-                  type="submit"
-                >
-                  Submit Message
-                </button>
-              </div>
-            </form>
+    <section id="projects">
+      <div class="projects container">
+        <h3 class="section__title">Projects</h3>
+        <div class="projects__wrapper">
+          <div class="project__img-card">
+            <img src="/assets/images/projects/rivella.png" alt="Rivella's landing page" class="project__img">
           </div>
-          <p class="credits">
-            Made with <i class="fas fa-heart"></i> by Chrismarcel &copy;
-          </p>
+          <div class="project__img-card">
+            <img src="/assets/images/projects/luganodante.png" alt="Luganodante's landing page" class="project__img">
+          </div>
+          <div class="project__img-card">
+            <img src="/assets/images/projects/ticino.png" alt="Ticino's landing page" class="project__img">
+          </div>
+          <div class="project__img-card">
+            <img src="/assets/images/projects/wesupport.png" alt="We support's landing page" class="project__img">
+          </div>
+          <div class="project__img-card">
+            <img src="/assets/images/projects/freshland.png" alt="Freshland's landing page" class="project__img">
+          </div>
+          <div class="project__img-card">
+            <img src="/assets/images/projects/covid-dashboard.png" alt="Nigerian Covid 19 update dashboard" class="project__img">
+          </div>
+          <div class="project__img-card">
+            <img src="/assets/images/projects/coffective.png" alt="Coffective's landing page hero section" class="project__img">
+          </div>
+          <div class="project__img-card">
+            <img src="/assets/images/projects/inboxpolice.png" alt="Inbox Police's login page" class="project__img">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="contact container">
+        <div>
+          <h4 class="section__title text--center">Get in touch!</h4>
+          <article class="contact__details">
+            <p class="contact__text">
+              Do you have any questions or enquiries or would you like a quick chat? Perhaps you would
+              like to discuss exciting ideas, projects and opportunities with me? Feel free to reach
+              out to via email, phone or on any of social media platforms linked below.
+            </p>
+            <div class="contact__info">
+              <p class="contact__phone"><i class="fas fa-mobile-alt"></i> (234) 703 968 6973</p>
+              <p class="contact__email"><i class="fas fa-envelope"></i> cmarcelj@gmail.com</p>
+            </div>
+          </article>
+        </div>
+        <div>
+          <p class="credits">Made with <i class="fas fa-heart"></i> by Chrismarcel &copy;</p>
         </div>
       </div>
     </section>
   </body>
-  <script src="/js/index.js"></script>
+  <script src="/assets/js/app.js"></script>
 </html>
