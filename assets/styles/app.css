@@ -190,8 +190,10 @@ section:not(.latched)::before {
   top: -7px;
   right: 0;
   position: absolute;
-  background: yellow;
-  height: 7px;
+  box-shadow: -1px -20px 55px -10px rgba(7, 33, 66, 0.39);
+  -webkit-box-shadow: -1px -20px 55px -10px rgba(7, 33, 66, 0.39);
+  -moz-box-shadow: -1px -20px 55px -10px rgba(7, 33, 66, 0.39);
+  height: 10px;
 }
 
 .hero {
