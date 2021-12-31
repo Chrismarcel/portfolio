@@ -113,6 +113,26 @@ a {
   color: #3700ff;
   font-size: 80px;
   font-family: 'Playfair Display', serif;
+  position: relative;
+}
+
+.section__title--bg {
+  display: inline-block;
+}
+
+.section__title > span {
+  position: relative;
+  z-index: 10;
+}
+
+.section__title.section__title--bg::after {
+  content: '';
+  width: 100%;
+  height: 40%;
+  background: rgba(0, 159, 255, 0.18);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .section__subheader {
@@ -130,7 +150,7 @@ section {
   z-index: 999;
   position: relative;
   min-height: 100vh;
-  padding: 70px 0;
+  padding: 120px 0;
 }
 
 .latched {
@@ -483,6 +503,10 @@ section:not(.latched)::before {
   color: #000000;
 }
 
+.download-resume i {
+  margin-left: 15px;
+}
+
 .tab__btn {
   padding: 15px 20px;
   min-width: 180px;
@@ -535,6 +559,55 @@ section:not(.latched)::before {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  flex-direction: column;
+}
+
+.project__img {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 160px;
+  box-shadow: 6px 15px 20px rgb(7 33 66 / 15%);
+}
+
+.project__img-wrapper {
+  background-size: 100%, 325px;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#rivella {
+  background-image: url(/assets/images/projects/rivella-bg.png);
+}
+
+#luganodante {
+  background-image: url(/assets/images/projects/luganodante-bg.png);
+}
+
+#ticino {
+  background-image: url(/assets/images/projects/ticino-bg.png);
+}
+
+#we-support {
+  background-image: url(/assets/images/projects/wesupport-bg.png);
+}
+
+#freshland {
+  background-image: url(/assets/images/projects/freshland-bg.png);
+}
+
+#covid-updates {
+  background-image: url(/assets/images/projects/covid-updates-bg.png);
+}
+
+#coffective {
+  background-image: url(/assets/images/projects/coffective-bg.png);
+}
+
+#manor {
+  background-image: url(/assets/images/projects/manor-bg.png);
 }
 
 .credits {

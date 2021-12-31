@@ -39,13 +39,13 @@
             <a class="nav__link" href="#profile">Profile</a>
           </li>
           <li>
-            <a class="nav__link" href="#skillset">Skills</a>
-          </li>
-          <li>
             <a class="nav__link" href="#projects">Projects</a>
           </li>
           <li>
             <a class="nav__link" href="#contact">Contact</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">Blog</a>
           </li>
         </ul>
       </div>
@@ -82,7 +82,7 @@
     </main>
     <section id="profile">
       <div class="profile container">
-        <h3 class="section__title">About me</h3>
+        <h3 class="section__title section__title--bg"><span>About me.</span></h3>
         <!-- <ul class="profile__links">
           <li>
             <a class="profile__link" href="https://github.com/Chrismarcel" target="_blank">
@@ -110,8 +110,8 @@
                 </p>
                 <p>
                   With core interest in working on the Front-end side of the web, I enjoy building
-                  responsive and user-friendly interfaces using modern web technologies. I'm also
-                  skilled in using design tools such as Figma to design interfaces and also
+                  responsive and user-friendly interfaces using modern web technologies. I'm proficient 
+                  in using design tools to design user interfaces and also
                   seamlessly convert designs to pixel-perfect user experiences.
                 </p>
               </article>
@@ -225,31 +225,79 @@
     </section>
     <section id="projects">
       <div class="projects container">
-        <h3 class="section__title">Projects</h3>
+        <h3 class="section__title section__title--bg"><span>Projects.</span></h3>
         <div class="projects__wrapper">
           <div class="project__img-card">
-            <img src="/assets/images/projects/rivella.png" alt="Rivella's landing page" class="project__img">
+            <div class="project__img-wrapper" id="rivella">
+              <img src="/assets/images/projects/rivella.png" alt="Rivella's landing page" class="project__img">
+            </div>
+            <div class="project__details">
+              <h5 class="project__name">Rivella</h5>
+              <p class="project__description">Rivella description</p>
+            </div>
           </div>
           <div class="project__img-card">
-            <img src="/assets/images/projects/luganodante.png" alt="Luganodante's landing page" class="project__img">
+            <div class="project__img-wrapper" id="luganodante">
+              <img src="/assets/images/projects/luganodante.png" alt="Luganodante's landing page" class="project__img">
+            </div>
+            <div class="project__details">
+              <h5 class="project__name">Luganodante</h5>
+              <p class="project__description">Luganodante description</p>
+            </div>
           </div>
           <div class="project__img-card">
-            <img src="/assets/images/projects/ticino.png" alt="Ticino's landing page" class="project__img">
+            <div class="project__img-wrapper" id="ticino">
+              <img src="/assets/images/projects/ticino.png" alt="Ticino's landing page" class="project__img">
+            </div>  
+            <div class="project__details">
+              <h5 class="project__name">Ticino</h5>
+              <p class="project__description">Ticino description</p>
+            </div>
           </div>
           <div class="project__img-card">
-            <img src="/assets/images/projects/wesupport.png" alt="We support's landing page" class="project__img">
+            <div class="project__img-wrapper" id="we-support">
+              <img src="/assets/images/projects/wesupport.png" alt="We support's landing page" class="project__img">
+            </div>  
+            <div class="project__details">
+              <h5 class="project__name">WeSupport.Business</h5>
+              <p class="project__description">WeSupport.Business description</p>
+            </div>  
           </div>
           <div class="project__img-card">
-            <img src="/assets/images/projects/freshland.png" alt="Freshland's landing page" class="project__img">
+            <div class="project__img-wrapper" id="freshland">
+              <img src="/assets/images/projects/freshland.png" alt="Freshland's landing page" class="project__img">
+            </div>  
+            <div class="project__details">
+              <h5 class="project__name">Freshland</h5>
+              <p class="project__description">Freshland description</p>
+            </div>
           </div>
           <div class="project__img-card">
-            <img src="/assets/images/projects/covid-dashboard.png" alt="Nigerian Covid 19 update dashboard" class="project__img">
+            <div class="project__img-wrapper" id="covid-updates">
+              <img src="/assets/images/projects/covid-dashboard.png" alt="Nigerian Covid 19 update dashboard" class="project__img">
+            </div> 
+            <div class="project__details">
+              <h5 class="project__name">Covid 19 Dashboard</h5>
+              <p class="project__description">Covid 19 Dashboard description</p>
+            </div>
           </div>
           <div class="project__img-card">
-            <img src="/assets/images/projects/coffective.png" alt="Coffective's landing page hero section" class="project__img">
+            <div class="project__img-wrapper" id="coffective">
+              <img src="/assets/images/projects/coffective.png" alt="Coffective's landing page hero section" class="project__img">
+            </div>
+            <div class="project__details">
+              <h5 class="project__name">Coffective</h5>
+              <p class="project__description">Coffective description</p>
+            </div>
           </div>
           <div class="project__img-card">
-            <img src="/assets/images/projects/inboxpolice.png" alt="Inbox Police's login page" class="project__img">
+            <div class="project__img-wrapper" id="manor">
+              <img src="/assets/images/projects/manor.png" alt="Manor MasterCard onboarding page" class="project__img">
+            </div>
+            <div class="project__details">
+              <h5 class="project__name">Manor MasterCard</h5>
+              <p class="project__description">Manor MasterCard description</p>
+            </div>
           </div>
         </div>
       </div>
@@ -265,7 +313,7 @@
               out to via email, phone or on any of social media platforms linked below.
             </p>
             <div class="contact__info">
-              <p class="contact__phone"><i class="fas fa-mobile-alt"></i> (234) 703 968 6973</p>
+              <p class="contact__phone"><i class="fas fa-mobile-alt"></i> (+234) 703 968 6973</p>
               <p class="contact__email"><i class="fas fa-envelope"></i> cmarcelj@gmail.com</p>
             </div>
           </article>
