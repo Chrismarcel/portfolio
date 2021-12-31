@@ -741,6 +741,7 @@ section:not(.latched)::before {
   padding: 25px;
   text-align: center;
   letter-spacing: 0.2px;
+  font-family: 'Playfair Display', serif;
 }
 
 .credits i {
