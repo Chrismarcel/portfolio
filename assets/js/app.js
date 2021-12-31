@@ -135,3 +135,10 @@ getNodesList('.tabs__experience .tab__btn').forEach((tabItem, _, nodeList) =>
 getNodesList('.tabs__tools .tab__btn').forEach((tabItem, _, nodeList) =>
   tabItem.addEventListener('click', e => onTabItemClick(e, nodeList, 'tools-tabs'))
 )
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    selectElement('#preloader').classList.add('done')
+    selectElement('body').removeAttribute('data-preloaded')
+  }, 1600)
+})
