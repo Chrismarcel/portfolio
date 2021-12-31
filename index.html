@@ -23,6 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/brands.min.css"
     />
     <link rel="stylesheet" href="/assets/styles/app.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Chrismarcel</title>
   </head>
   <body data-preloaded="false">
@@ -41,23 +42,23 @@
     </div>
     <nav class="nav">
       <div class="container nav__inner">
-        <img src="/assets/images/logo.svg" class="logo" alt="Chrismarcel logo" />
+        <img data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="2000" src="/assets/images/logo.svg" class="logo" alt="Chrismarcel logo" />
         <button class="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </button>
         <ul class="nav__menu">
-          <li>
+          <li data-aos="zoom-out-down" data-aos-delay="2100" data-aos-duration="800">
             <a class="nav__link" href="#profile">Profile</a>
           </li>
-          <li>
+          <li data-aos="zoom-out-down" data-aos-delay="2200" data-aos-duration="800">
             <a class="nav__link" href="#projects">Projects</a>
           </li>
-          <li>
+          <li data-aos="zoom-out-down" data-aos-delay="2300" data-aos-duration="800">
             <a class="nav__link" href="#contact">Contact</a>
           </li>
-          <li>
+          <li data-aos="zoom-out-down" data-aos-delay="2400" data-aos-duration="800">
             <a class="nav__link" href="#">Blog</a>
           </li>
         </ul>
@@ -67,28 +68,30 @@
       <div class="container hero__content--wrapper">
         <article class="hero__content">
           <div>
-            <p class="hero__text">
+            <p class="hero__text" data-aos="fade-right" data-aos-delay="2500" data-aos-duration="1000">
               Hello! 👋
             </p>
-            <p class="hero__text hero__text--lg">I'm Chrismarcel.</p>
-            <p class="hero__text hero__text--lg hero__text--gradient">
+            <p data-aos="fade-right" data-aos-delay="2600" data-aos-duration="1200" class="hero__text hero__text--lg">I'm Chrismarcel.</p>
+            <p data-aos="fade-right" data-aos-delay="2700" data-aos-duration="1400" class="hero__text hero__text--lg hero__text--gradient">
               I build stuff on the web.
             </p>
           </div>
-          <p class="hero__text">
+          <p class="hero__text" data-aos="fade-right" data-aos-delay="2800" data-aos-duration="1500">
             I'm a Front-End Software Engineer based in Lagos, Nigeria, specialized
             in building exceptional user interfaces and experiences.
           </p>
-          <a href="#contact" class="btn btn--solid hero-cta">
+          <a data-aos="fade-right" data-aos-delay="2900" data-aos-duration="1000" href="#contact" class="btn btn--solid hero-cta">
             <i class="fas fa-envelope"></i>
             <span>Get in touch</span>
           </a>
         </article>
-        <figure class="profile__image-wrapper">
+        <figure class="profile__image-wrapper" data-aos="fade-up" data-aos-delay="2600" data-aos-duration="500">
           <img
             class="profile__image"
             src="/assets/images/portrait.jpg"
             alt="A portrait of Chrismarcel"
+            data-aos="zoom-in" data-aos-delay="2800"
+            data-aos-duration="800"
           />
         </figure>
       </div>
@@ -373,4 +376,8 @@
     </section>
   </body>
   <script src="/assets/js/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init()
+  </script>
 </html>
