@@ -414,6 +414,35 @@ section:not(.latched)::before {
   margin-top: 40px;
 }
 
+.profile__links {
+  display: flex;
+  margin-bottom: 60px;
+  margin-left: 20px;
+}
+
+.profile__link {
+  position: relative;
+  color: #3700ff;
+}
+
+.profile__link-item {
+  margin-right: 70px;
+}
+
+.profile__link::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 3px solid #3700ff;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -12px;
+  left: -16px;
+  opacity: 1;
+  transition: all 450ms ease-in-out;
+}
+
 .profile__description {
   display: flex;
 }
@@ -651,6 +680,10 @@ section:not(.latched)::before {
   justify-content: space-between;
 }
 
+.contact .profile__links {
+  margin-top: 60px;
+}
+
 .contact__info {
   margin: 30px 0;
   font-size: 40px;
@@ -661,6 +694,7 @@ section:not(.latched)::before {
   font-weight: 600;
   margin-bottom: 40px;
   color: #3700ff;
+  text-align: center;
 }
 
 .contact__link {
