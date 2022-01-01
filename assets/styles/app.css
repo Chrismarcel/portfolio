@@ -213,10 +213,9 @@ section:not(.latched)::before {
 }
 
 .hero-cta {
-  align-self: flex-start;
   position: relative;
   display: inline-block;
-  margin-top: 2vh;
+  margin-top: 5vh;
   margin-bottom: 4vh;
   align-self: center;
   font-size: 2vh;
@@ -280,6 +279,9 @@ section:not(.latched)::before {
 
 .hero__content--wrapper {
   margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .hero__content {
@@ -596,11 +598,11 @@ section:not(.latched)::before {
 
 /* Style for the contact section */
 .profile__image {
-  width: 100%;
+  max-width: 300px;
   box-shadow: 6px 11px 13px rgba(7, 33, 66, 0.16);
   border-radius: 10px;
   position: relative;
-  top: -18px;
+  top: -22px;
   left: -18px;
 }
 
@@ -845,7 +847,7 @@ section:not(.latched)::before {
 
   .hero__content--wrapper {
     margin-top: 180px;
-    display: flex;
+    flex-direction: row;
   }
 
   .hero__content {
@@ -951,6 +953,7 @@ section:not(.latched)::before {
   .profile__image {
     top: -25px;
     left: -22px;
+    max-width: 400px;
   }
 }
 
