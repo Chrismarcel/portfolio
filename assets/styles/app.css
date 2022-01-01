@@ -597,6 +597,7 @@ section:not(.latched)::before {
 
 .tab__item[data-active='true'] {
   border-color: #3700ff;
+  transition: border 500ms ease-in;
 }
 
 /* Style for the contact section */
