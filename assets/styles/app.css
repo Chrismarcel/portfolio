@@ -172,7 +172,7 @@ section {
   z-index: 999;
   position: relative;
   min-height: 100vh;
-  padding: 40px;
+  padding: 70px 40px;
 }
 
 .latched {
@@ -626,7 +626,7 @@ section:not(.latched)::before {
 }
 
 .project__img {
-  width: 100%;
+  width: 85%;
   max-width: 550px;
   margin-top: 86px;
   box-shadow: 6px 15px 20px rgb(7 33 66 / 15%);
@@ -699,9 +699,9 @@ section:not(.latched)::before {
 }
 
 .contact__details {
-  margin-top: 70px;
+  margin-top: 30px;
   line-height: 3rem;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .contact {
@@ -893,9 +893,7 @@ section:not(.latched)::before {
 
   .contact__details {
     font-size: 30px;
-  }
-
-  .contact__details {
+    margin-top: 70px;
     max-width: 70%;
   }
 
@@ -950,6 +948,7 @@ section:not(.latched)::before {
 
   .project__img {
     margin-top: 160px;
+    width: 100%;
   }
 }
 
