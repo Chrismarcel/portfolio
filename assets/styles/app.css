@@ -495,7 +495,7 @@ section:not(.latched)::before {
 }
 
 .profile__image-wrapper {
-  max-width: 300px;
+  width: 300px;
   height: 300px;
   background-image: linear-gradient(90deg, #3700ff, #ff0059);
   align-self: flex-start;
@@ -505,7 +505,16 @@ section:not(.latched)::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 0;
+}
+
+.profile__image {
+  max-width: 300px;
+  box-shadow: 6px 11px 13px rgba(7, 33, 66, 0.16);
+  border-radius: 10px;
+  position: relative;
+  top: -22px;
+  left: -18px;
 }
 
 .profile__image-wrapper::before {
@@ -594,16 +603,6 @@ section:not(.latched)::before {
 .tab__item[data-active='true'] {
   border-color: #3700ff;
   transition: border 500ms ease-in;
-}
-
-/* Style for the contact section */
-.profile__image {
-  max-width: 300px;
-  box-shadow: 6px 11px 13px rgba(7, 33, 66, 0.16);
-  border-radius: 10px;
-  position: relative;
-  top: -22px;
-  left: -18px;
 }
 
 .projects__wrapper {
