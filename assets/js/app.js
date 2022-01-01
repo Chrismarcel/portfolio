@@ -40,7 +40,7 @@ selectElement('.credits').appendChild(copyrightYear)
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.005,
+  threshold: [0, 0.2],
   delay: 100
 }
 
@@ -51,17 +51,17 @@ const observer = new IntersectionObserver(entries => {
     } = entry
 
     if (entry.isIntersecting) {
-      console.log(entry)
-      if (prevSection.nodeName.toLowerCase() === 'section') {
+      if (prevSection.dataset.wrapper) {
         prevSection.classList.add('latched')
       }
-    } else {
+    } 
+    else {
       prevSection.classList.remove('latched')
     }
   })
 }, observerOptions)
 
-getNodesList('section').forEach(targetSection => {
+getNodesList('[data-wrapper="true"]').forEach(targetSection => {
   observer.observe(targetSection)
 })
 // End Section latching implementation
