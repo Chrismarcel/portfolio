@@ -34,10 +34,6 @@ body {
   font-size: 24px;
 }
 
-body[data-preloaded='false'] {
-  overflow: hidden;
-}
-
 li {
   list-style: none;
 }
@@ -66,6 +62,7 @@ a {
 
 .preloader__inner {
   display: inline-block;
+  position: relative;
 }
 
 .container {
@@ -172,16 +169,18 @@ section {
   background-color: #c3cbdc;
   background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
   width: 100%;
-  top: 100vh;
   z-index: 999;
   position: relative;
   min-height: 100vh;
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .latched {
   position: sticky;
-  top: 0;
+}
+
+#profile.latched {
+  top: -190px;
 }
 
 section:not(.latched)::before {
@@ -203,7 +202,7 @@ section:not(.latched)::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   z-index: 100;
   background-color: #c3cbdc;
   background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
@@ -560,6 +559,10 @@ section:not(.latched)::before {
   color: #000000;
 }
 
+.download-resume {
+  display: inline-block;
+}
+
 .download-resume i {
   margin-left: 15px;
 }
@@ -713,7 +716,7 @@ section:not(.latched)::before {
 }
 
 .contact__info {
-  margin: 30px 0;
+  margin: 60px 0 30px 0;
   font-size: 40px;
 }
 

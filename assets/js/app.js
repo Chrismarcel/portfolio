@@ -4,12 +4,16 @@ const selectAllElements = document.querySelectorAll.bind(document)
 const selectElement = document.querySelector.bind(document)
 const getNodesList = nodes => Array.from(selectAllElements(nodes))
 
-// Remove smooth scroll when Contact button/link is clicked
-getNodesList('a[href="#contact"]').forEach(node => {
-  node.addEventListener('click', () => {
-    document.documentElement.style.scrollBehavior = 'auto'
-  })
-})
+const SECTIONS = {
+  HERO: 'hero',
+  PROFILE: 'profile',
+  PROJECTS: 'projects',
+  CONTACT: 'contact'
+}
+
+const getSectionHeight = section => {
+  return selectElement(`#${section}`).offsetHeight
+}
 
 // Handle hamburger menu toggle
 selectElement('.hamburger').addEventListener('click', function() {
@@ -36,7 +40,7 @@ selectElement('.credits').appendChild(copyrightYear)
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0,
+  threshold: 0.005,
   delay: 100
 }
 
@@ -47,18 +51,12 @@ const observer = new IntersectionObserver(entries => {
     } = entry
 
     if (entry.isIntersecting) {
-      const { offsetHeight: sectionHeight } = prevSection
-      const { innerHeight: viewportHeight } = window
-      const offsetTop = viewportHeight - sectionHeight - 0.05 * viewportHeight
+      console.log(entry)
       if (prevSection.nodeName.toLowerCase() === 'section') {
         prevSection.classList.add('latched')
-        prevSection.style.top = `${offsetTop + 25}px`
       }
     } else {
       prevSection.classList.remove('latched')
-      if (prevSection.nodeName.toLowerCase() === 'section') {
-        prevSection.style.top = '100vh'
-      }
     }
   })
 }, observerOptions)
@@ -137,14 +135,33 @@ getNodesList('.tabs__tools .tab__btn').forEach((tabItem, _, nodeList) =>
 )
 
 window.addEventListener('load', () => {
+  document.body.style.overflow = 'hidden'
   new Promise(resolve => {
     setTimeout(() => {
       selectElement('#preloader').classList.add('done')
-      selectElement('body').removeAttribute('data-preloaded')
+      document.body.style.overflow = 'scroll'
       resolve()
     }, 1600)
   }).then(() => {
     // remove preloader node 1s after preloader is done
     setTimeout(() => selectElement('#preloader').remove(), 1000)
+  })
+
+  const sectionOffsetTop = {
+    [SECTIONS.HERO]: 0,
+    [SECTIONS.PROFILE]: getSectionHeight(SECTIONS.HERO),
+    [SECTIONS.PROJECTS]: getSectionHeight(SECTIONS.HERO) + getSectionHeight(SECTIONS.PROFILE),
+    [SECTIONS.CONTACT]: getSectionHeight(SECTIONS.HERO) + getSectionHeight(SECTIONS.PROFILE) + getSectionHeight(SECTIONS.PROJECTS)
+  }
+
+  // Scroll to section on nav link click
+  getNodesList('a.nav__link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault()
+      const targetSection = e.target.dataset.section
+      const offsetTop = sectionOffsetTop[targetSection]
+
+      window.scrollTo(0, offsetTop)
+    })
   })
 })

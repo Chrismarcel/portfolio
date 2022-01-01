@@ -10,39 +10,51 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;600;700&family=Source+Serif+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/solid.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/brands.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/solid.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/brands.min.css" />
     <link rel="stylesheet" href="/assets/styles/app.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Chrismarcel</title>
   </head>
-  <body data-preloaded="false">
+  <body>
     <div id="preloader">
       <div class="preloader__inner">
         <svg width="152" height="152" viewBox="0 0 152 152" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="76" cy="76" r="72.2" stroke="#131419" stroke-width="7.6" class="svg-elem-1"></circle>
-          <path d="M129.195 45.6841C115.526 45.1225 120.415 42.9083 108.862 77.7177C97.3097 112.527 92.6047 106.479 73.3119 107.19" stroke="#131419" stroke-width="10.2892" class="svg-elem-2"></path>
+          <path
+            d="M129.195 45.6841C115.526 45.1225 120.415 42.9083 108.862 77.7177C97.3097 112.527 92.6047 106.479 73.3119 107.19"
+            stroke="#131419"
+            stroke-width="10.2892"
+            class="svg-elem-2"
+          ></path>
           <path d="M87.564 44.182L126.955 45.371" stroke="#131419" stroke-width="9.93846" class="svg-elem-3"></path>
           <path d="M71.5531 68.9969L84.1199 68.8792L80.2129 82.9472L67.649 83.0648L71.5531 68.9969Z" fill="#131419" class="svg-elem-4"></path>
-          <path d="M22.689 106.46C35.4223 109.246 36.0212 96.9311 42.0046 76.7155C47.9881 56.4999 49.0954 41.5178 82.4963 44.1626" stroke="#131419" stroke-width="10.1723" class="svg-elem-5"></path>
+          <path
+            d="M22.689 106.46C35.4223 109.246 36.0212 96.9311 42.0046 76.7155C47.9881 56.4999 49.0954 41.5178 82.4963 44.1626"
+            stroke="#131419"
+            stroke-width="10.1723"
+            class="svg-elem-5"
+          ></path>
           <path d="M68.8701 107.074L26.9498 106.849" stroke="#131419" stroke-width="10.2892" class="svg-elem-6"></path>
-          <path d="M49.6941 101.929C49.6941 105.029 44.9459 107.074 41.6849 107.074C38.4239 107.074 35.7803 104.561 35.7803 101.462C35.7803 98.3619 39.4177 93.5107 42.6787 93.5107C41.8603 99.1231 44.7834 101.929 49.6941 101.929Z" fill="#131419" class="svg-elem-7"></path>
-        </svg> 
+          <path
+            d="M49.6941 101.929C49.6941 105.029 44.9459 107.074 41.6849 107.074C38.4239 107.074 35.7803 104.561 35.7803 101.462C35.7803 98.3619 39.4177 93.5107 42.6787 93.5107C41.8603 99.1231 44.7834 101.929 49.6941 101.929Z"
+            fill="#131419"
+            class="svg-elem-7"
+          ></path>
+        </svg>
       </div>
     </div>
     <nav class="nav">
       <div class="container nav__inner">
-        <img data-aos="zoom-in-right" data-aos-duration="800" data-aos-delay="2000" src="/assets/images/logo.svg" class="logo" alt="Chrismarcel logo" />
+        <img
+          data-aos="zoom-in-right"
+          data-aos-duration="800"
+          data-aos-delay="2000"
+          src="/assets/images/logo.svg"
+          class="logo"
+          alt="Chrismarcel logo"
+        />
         <button class="hamburger">
           <span></span>
           <span></span>
@@ -50,13 +62,13 @@
         </button>
         <ul class="nav__menu">
           <li data-aos="zoom-out-down" data-aos-delay="2100" data-aos-duration="800">
-            <a class="nav__link" href="#profile">Profile</a>
+            <a data-section="profile" class="nav__link" href="#profile">Profile</a>
           </li>
           <li data-aos="zoom-out-down" data-aos-delay="2200" data-aos-duration="800">
-            <a class="nav__link" href="#projects">Projects</a>
+            <a data-section="projects" class="nav__link" href="#projects">Projects</a>
           </li>
           <li data-aos="zoom-out-down" data-aos-delay="2300" data-aos-duration="800">
-            <a class="nav__link" href="#contact">Contact</a>
+            <a data-section="contact" class="nav__link" href="#contact">Contact</a>
           </li>
           <li data-aos="zoom-out-down" data-aos-delay="2400" data-aos-duration="800">
             <a class="nav__link" href="#">Blog</a>
@@ -71,14 +83,15 @@
             <p class="hero__text" data-aos="fade-right" data-aos-delay="2500" data-aos-duration="1000">
               Hello! 👋
             </p>
-            <p data-aos="fade-right" data-aos-delay="2600" data-aos-duration="1200" class="hero__text hero__text--lg">I'm Chrismarcel.</p>
+            <p data-aos="fade-right" data-aos-delay="2600" data-aos-duration="1200" class="hero__text hero__text--lg">
+              I'm Chrismarcel.
+            </p>
             <p data-aos="fade-right" data-aos-delay="2700" data-aos-duration="1400" class="hero__text hero__text--lg hero__text--gradient">
               I build stuff on the web.
             </p>
           </div>
           <p class="hero__text" data-aos="fade-right" data-aos-delay="2800" data-aos-duration="1500">
-            I'm a Front-End Software Engineer based in Lagos, Nigeria, specialized
-            in building exceptional user interfaces and experiences.
+            I'm a Front-End Software Engineer based in Lagos, Nigeria, specialized in building exceptional user interfaces and experiences.
           </p>
           <a data-aos="fade-right" data-aos-delay="2900" data-aos-duration="1000" href="#contact" class="btn btn--solid hero-cta">
             <i class="fas fa-envelope"></i>
@@ -90,7 +103,8 @@
             class="profile__image"
             src="/assets/images/portrait.jpg"
             alt="A portrait of Chrismarcel"
-            data-aos="zoom-in" data-aos-delay="2800"
+            data-aos="zoom-in"
+            data-aos-delay="2800"
             data-aos-duration="1000"
           />
         </figure>
@@ -98,23 +112,24 @@
     </main>
     <section id="profile">
       <div class="profile container">
-        <h3 class="section__title section__title--bg"><span>About me.</span></h3>
+        <h3 data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800" class="section__title section__title--bg">
+          <span>About me.</span>
+        </h3>
         <div class="container__inner">
           <div class="profile__description">
             <div class="profile__bio__wrapper">
-              <article class="profile__bio">
+              <article class="profile__bio" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="800">
                 <p>
-                  I'm Chrismarcel James, a Front-End Software Engineer in Lagos, Nigeria with about 4+ years
-                  of professional experience working with various web technologies.
+                  I'm Chrismarcel James, a Front-End Software Engineer in Lagos, Nigeria with about 4+ years of professional experience working with
+                  various web technologies.
                 </p>
                 <p>
-                  With core interest in working on the Front-end side of the web, I enjoy building
-                  responsive and user-friendly interfaces using modern web technologies. I'm proficient 
-                  in using design tools to design user interfaces and also
-                  seamlessly convert designs to pixel-perfect user experiences.
+                  With core interest in working on the Front-end side of the web, I enjoy building responsive and user-friendly interfaces using
+                  modern web technologies. I'm proficient in using design tools to design user interfaces and also seamlessly convert designs to
+                  pixel-perfect user experiences.
                 </p>
               </article>
-              <ul class="profile__links">
+              <ul class="profile__links" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="800">
                 <li class="profile__link-item">
                   <a class="profile__link" href="https://github.com/Chrismarcel" target="_blank">
                     <i class="fab fa-github"></i>
@@ -134,104 +149,127 @@
               <a
                 href="https://bit.ly/chrismarcel-resume"
                 class="btn btn--solid download-resume transition--push-down"
+                data-aos="fade-up"
+                data-aos-delay="1700"
+                data-aos-duration="800"
               >
                 Download Resume
                 <i class="fas fa-file-download"></i>
               </a>
             </div>
             <div class="profile__experience">
-              <h3 class="section__subheader">Work Experience</h3>
-              <div class="tabs-wrapper tabs__experience" data-tabs="experiences-tabs">
+              <h3 class="section__subheader" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="800">
+                Work Experience
+              </h3>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="1900"
+                data-aos-duration="800"
+                class="tabs-wrapper tabs__experience"
+                data-tabs="experiences-tabs"
+              >
                 <ul role="tablist">
                   <li class="tab__item" id data-active="true" role="presentation">
-                    <button class="tab__btn" type="button" data-active="true" data-tab="tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
+                    <button class="tab__btn" data-active="true" data-tab="tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
                       HomeVision Inc.
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
                       ColorElephant
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
                       Fiddler
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
                       Andela
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-5" role="tab" aria-controls="tab-5" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-5" role="tab" aria-controls="tab-5" aria-selected="false">
                       Icojon
                     </button>
                   </li>
                 </ul>
                 <div class="tab__content-wrapper">
                   <div class="tab__content" data-active="true" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
-                    <p class="company-role">Software Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://homevision.co" class="company-name">HomeVision</a></p>
+                    <p class="company-role">
+                      Software Engineer @
+                      <a target="_blank" rel="noopener noreferrer" href="https://homevision.co" class="company-name">HomeVision</a>
+                    </p>
                     <span class="company-duration">Sep 2020 - Present</span>
                   </div>
                   <div class="tab__content" data-active="false" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
-                    <p class="company-role">Front-End Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://colorelephant.com/" class="company-name">ColorElephant</a></p>
+                    <p class="company-role">
+                      Front-End Engineer @
+                      <a target="_blank" rel="noopener noreferrer" href="https://colorelephant.com/" class="company-name">ColorElephant</a>
+                    </p>
                     <span class="company-duration">Dec 2019 - Aug 2020</span>
                   </div>
                   <div class="tab__content" data-active="false" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-                    <p class="company-role">Front-End Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://fiddler.ai" class="company-name">Fiddler</a></p>
+                    <p class="company-role">
+                      Front-End Engineer @
+                      <a target="_blank" rel="noopener noreferrer" href="https://fiddler.ai" class="company-name">Fiddler</a>
+                    </p>
                     <span class="company-duration">Jan 2020 - Apr 2020 (Contract)</span>
                   </div>
                   <div class="tab__content" data-active="false" id="tab-4" role="tabpanel" aria-labelledby="tab-3">
-                    <p class="company-role">Software Engineer @ <a target="_blank" rel="noopener noreferrer" href="https://andela.com" class="company-name">Andela</a></p>
+                    <p class="company-role">
+                      Software Engineer @
+                      <a target="_blank" rel="noopener noreferrer" href="https://andela.com" class="company-name">Andela</a>
+                    </p>
                     <span class="company-duration">Feb 2019 - Feb 2020</span>
                   </div>
                   <div class="tab__content" data-active="false" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
-                    <p class="company-role">Web Developer @ <a target="_blank" rel="noopener noreferrer" href="https://icojon.ng" class="company-name">Icojon</a></p>
+                    <p class="company-role">
+                      Web Developer @
+                      <a target="_blank" rel="noopener noreferrer" href="https://icojon.ng" class="company-name">Icojon</a>
+                    </p>
                     <span class="company-duration">Oct 2017 - Jan 2019</span>
                   </div>
                 </div>
               </div>
-              <h3 class="section__subheader">Tools I've worked with</h3>
-              <div class="tabs-wrapper tabs__tools" data-tabs="tools-tabs">
+              <h3 class="section__subheader" data-aos="fade-up" data-aos-delay="2100" data-aos-duration="800">
+                Tools I've worked with
+              </h3>
+              <div data-aos="fade-up" data-aos-delay="2300" data-aos-duration="800" class="tabs-wrapper tabs__tools" data-tabs="tools-tabs">
                 <ul role="tablist">
-                  <li class="tab__item" id data-active="true" role="presentation">
-                    <button class="tab__btn" type="button" data-active="true" data-tab="tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
+                  <li class="tab__item" data-active="true" role="presentation">
+                    <button class="tab__btn" data-active="true" data-tab="tab-1" role="tab" aria-controls="tab-1" aria-selected="true">
                       Design
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-2" role="tab" aria-controls="tab-2" aria-selected="false">
                       Front-End
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-3" role="tab" aria-controls="tab-3" aria-selected="false">
                       Back-End
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-4" role="tab" aria-controls="tab-4" aria-selected="false">
                       Databases
                     </button>
                   </li>
                   <li class="tab__item" data-active="false" role="presentation">
-                    <button class="tab__btn type="button" data-active="false" data-tab="tab-5" role="tab" aria-controls="tab-5" aria-selected="false">
+                    <button class="tab__btn" data-active="false" data-tab="tab-5" role="tab" aria-controls="tab-5" aria-selected="false">
                       Tooling
                     </button>
                   </li>
                 </ul>
                 <div class="tab__content-wrapper">
-                  <div class="tab__content" data-active="true" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
-                  </div>
-                  <div class="tab__content" data-active="false" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
-                  </div>
-                  <div class="tab__content" data-active="false" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-                  </div>
-                  <div class="tab__content" data-active="false" id="tab-4" role="tabpanel" aria-labelledby="tab-3">
-                  </div>
-                  <div class="tab__content" data-active="false" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
-                  </div>
+                  <div class="tab__content" data-active="true" id="tab-1" role="tabpanel" aria-labelledby="tab-1"></div>
+                  <div class="tab__content" data-active="false" id="tab-2" role="tabpanel" aria-labelledby="tab-2"></div>
+                  <div class="tab__content" data-active="false" id="tab-3" role="tabpanel" aria-labelledby="tab-3"></div>
+                  <div class="tab__content" data-active="false" id="tab-4" role="tabpanel" aria-labelledby="tab-3"></div>
+                  <div class="tab__content" data-active="false" id="tab-5" role="tabpanel" aria-labelledby="tab-5"></div>
                 </div>
               </div>
             </div>
@@ -241,87 +279,103 @@
     </section>
     <section id="projects">
       <div class="projects container">
-        <h3 class="section__title section__title--bg"><span>Projects.</span></h3>
+        <h3 class="section__title section__title--bg" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800"><span>Projects.</span></h3>
         <div class="projects__wrapper">
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="800">
             <div class="project__img-wrapper" id="rivella">
-              <img src="/assets/images/projects/rivella.png" alt="Rivella's landing page" class="project__img">
+              <img src="/assets/images/projects/rivella.png" alt="Rivella's landing page" class="project__img" />
             </div>
             <div class="project__details">
               <h5 class="project__name">Rivella</h5>
-              <p class="project__description">Rivella is the most popular Swiss soft drink. With its unique taste, Rivella stands for the unmistakable lifestyle of Switzerland.</p>
+              <p class="project__description">
+                Rivella is the most popular Swiss soft drink. With its unique taste, Rivella stands for the unmistakable lifestyle of Switzerland.
+              </p>
               <a class="project__link" href="https://rivella.ch" rel="noopener noreferrer" target="_blank">View Project</a>
             </div>
           </div>
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">
             <div class="project__img-wrapper" id="luganodante">
-              <img src="/assets/images/projects/luganodante.png" alt="Luganodante's landing page" class="project__img">
+              <img src="/assets/images/projects/luganodante.png" alt="Luganodante's landing page" class="project__img" />
             </div>
             <div class="project__details">
               <h5 class="project__name">Luganodante</h5>
-              <p class="project__description">Luganodante is the ultimate meeting point for both hotel guests and locals looking for a unique experience in Lugano.</p>
+              <p class="project__description">
+                Luganodante is the ultimate meeting point for both hotel guests and locals looking for a unique experience in Lugano.
+              </p>
               <a class="project__link" href="https://luganodante.com/" rel="noopener noreferrer" target="_blank">View Project</a>
             </div>
           </div>
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="800">
             <div class="project__img-wrapper" id="ticino">
-              <img src="/assets/images/projects/ticino.png" alt="Ticino's landing page" class="project__img">
-            </div>  
+              <img src="/assets/images/projects/ticino.png" alt="Ticino's landing page" class="project__img" />
+            </div>
             <div class="project__details">
               <h5 class="project__name">Ticino</h5>
-              <p class="project__description">Official tourism site of Ticino, the most Mediterranean of the Swiss cantons.</p>
+              <p class="project__description">
+                Official tourism site of Ticino, the most Mediterranean of the Swiss cantons.
+              </p>
               <a class="project__link" href="https://ticino.ch" rel="noopener noreferrer" target="_blank">View Project</a>
             </div>
           </div>
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">
             <div class="project__img-wrapper" id="freshland">
-              <img src="/assets/images/projects/freshland.png" alt="Freshland's landing page" class="project__img">
-            </div>  
+              <img src="/assets/images/projects/freshland.png" alt="Freshland's landing page" class="project__img" />
+            </div>
             <div class="project__details">
               <h5 class="project__name">Freshland</h5>
-              <p class="project__description">Shortening and digitizing the food supply chain so that your raw materials find your front door as fresh as possible.</p>
+              <p class="project__description">
+                Shortening and digitizing the food supply chain so that your raw materials find your front door as fresh as possible.
+              </p>
               <a class="project__link" href="https://fresh.land/dk/" rel="noopener noreferrer" target="_blank">View Project</a>
             </div>
           </div>
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="800">
             <div class="project__img-wrapper" id="covid-updates">
-              <img src="/assets/images/projects/covid-dashboard.png" alt="Nigerian Covid 19 update dashboard" class="project__img">
-            </div> 
+              <img src="/assets/images/projects/covid-dashboard.png" alt="Nigerian Covid 19 update dashboard" class="project__img" />
+            </div>
             <div class="project__details">
               <h5 class="project__name">Covid 19 Dashboard</h5>
-              <p class="project__description">A simple dashboard for monitoring and reporting COVID-19 cases and statistics in Nigeria in near real time.</p>
+              <p class="project__description">
+                A simple dashboard for monitoring and reporting COVID-19 cases and statistics in Nigeria in near real time.
+              </p>
               <a class="project__link" href="https://covid19nigeria.herokuapp.com/" rel="noopener noreferrer" target="_blank">View Project</a>
             </div>
           </div>
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">
             <div class="project__img-wrapper" id="coffective">
-              <img src="/assets/images/projects/coffective.png" alt="Coffective's landing page hero section" class="project__img">
+              <img src="/assets/images/projects/coffective.png" alt="Coffective's landing page hero section" class="project__img" />
             </div>
             <div class="project__details">
               <h5 class="project__name">Coffective</h5>
-              <p class="project__description">Coffective envisions a world where communities are empowered and effective in improving the lives of all families.</p>
+              <p class="project__description">
+                Coffective envisions a world where communities are empowered and effective in improving the lives of all families.
+              </p>
               <a class="project__link" href="https://coffective.com/" rel="noopener noreferrer" target="_blank">View Project</a>
             </div>
           </div>
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="800">
             <div class="project__img-wrapper" id="manor">
-              <img src="/assets/images/projects/manor.png" alt="Manor MasterCard onboarding page" class="project__img">
+              <img src="/assets/images/projects/manor.png" alt="Manor MasterCard onboarding page" class="project__img" />
             </div>
             <div class="project__details">
               <h5 class="project__name">Manor World MasterCard</h5>
-              <p class="project__description">Manor Mastercard is a convenient and secure means of payment which enables customers benefit from Manor loyalty programs.</p>
+              <p class="project__description">
+                Manor Mastercard is a convenient and secure means of payment which enables customers benefit from Manor loyalty programs.
+              </p>
               <a class="project__link" href="https://manoronboarding.viseca.ch/de" rel="noopener noreferrer" target="_blank">View Project</a>
             </div>
           </div>
-          <div class="project__img-card">
+          <div class="project__img-card" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">
             <div class="project__img-wrapper" id="we-support">
-              <img src="/assets/images/projects/wesupport.png" alt="We support's landing page" class="project__img">
-            </div>  
+              <img src="/assets/images/projects/wesupport.png" alt="We support's landing page" class="project__img" />
+            </div>
             <div class="project__details">
               <h5 class="project__name">WeSupport.Business</h5>
-              <p class="project__description">Support local businesses during the Covid-19 pandemic by buying e-gift cards.</p>
+              <p class="project__description">
+                Support local businesses during the Covid-19 pandemic by buying e-gift cards.
+              </p>
               <a class="project__link" href="https://wesupport.business" rel="noopener noreferrer" target="_blank">View Project</a>
-            </div>  
+            </div>
           </div>
         </div>
       </div>
@@ -329,21 +383,20 @@
     <section id="contact">
       <div class="contact container">
         <div>
-          <h4 class="section__title text--center">Get in touch!</h4>
-          <article class="contact__details">
+          <h4 class="section__title text--center" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="800">Get in touch!</h4>
+          <article class="contact__details" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="800">
             <p class="contact__text">
-              Do you have any questions or enquiries or would you like a quick chat? Perhaps you would
-              like to discuss exciting ideas, projects and opportunities with me? Feel free to reach
-              out to via email, phone or on any of social media platforms linked below.
+              Do you have any questions or enquiries or would you like a quick chat? Perhaps you would like to discuss exciting ideas, projects and
+              opportunities with me? Feel free to reach out to via email, phone or on any of social media platforms linked below.
             </p>
-            <div class="contact__info">
+            <div class="contact__info" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="800">
               <div class="contact__detail">
-                <i class="fas fa-mobile-alt"></i> 
+                <i class="fas fa-mobile-alt"></i>
                 <a class="contact__link" href="tel:+2347039686973">
                   (+234) 703 968 6973
                 </a>
               </div>
-              <div class="contact__detail">
+              <div class="contact__detail" data-aos="fade-up" data-aos-delay="1700" data-aos-duration="800">
                 <i class="fas fa-envelope"></i>
                 <a class="contact__link" href="mailto:cmarcelj@gmail.com" rel="noopener noreferrer">
                   cmarcelj@gmail.com
@@ -352,7 +405,7 @@
             </div>
           </article>
         </div>
-        <ul class="profile__links">
+        <ul class="profile__links" data-aos="fade-up" data-aos-delay="1900" data-aos-duration="800">
           <li class="profile__link-item">
             <a class="profile__link" href="https://github.com/Chrismarcel" target="_blank">
               <i class="fab fa-github"></i>
@@ -369,7 +422,7 @@
             </a>
           </li>
         </ul>
-        <div>
+        <div data-aos="fade-up" data-aos-delay="2100" data-aos-duration="800">
           <p class="credits">Made with <i class="fas fa-heart"></i> by Chrismarcel &copy;</p>
         </div>
       </div>
@@ -378,6 +431,6 @@
   <script src="/assets/js/app.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init()
+    AOS.init({ once: true })
   </script>
 </html>
