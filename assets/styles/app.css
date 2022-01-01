@@ -516,14 +516,6 @@ section:not(.latched)::before {
   border-radius: 5px;
 }
 
-.profile__image {
-  box-shadow: 6px 11px 13px rgba(7, 33, 66, 0.16);
-  border-radius: 10px;
-  position: relative;
-  top: -25px;
-  left: -22px;
-}
-
 .tab__content-wrapper {
   margin-left: 30px;
 }
@@ -605,6 +597,11 @@ section:not(.latched)::before {
 /* Style for the contact section */
 .profile__image {
   width: 100%;
+  box-shadow: 6px 11px 13px rgba(7, 33, 66, 0.16);
+  border-radius: 10px;
+  position: relative;
+  top: -18px;
+  left: -18px;
 }
 
 .projects__wrapper {
@@ -628,7 +625,7 @@ section:not(.latched)::before {
 .project__img {
   width: 85%;
   max-width: 550px;
-  margin-top: 86px;
+  margin-top: 76px;
   box-shadow: 6px 15px 20px rgb(7 33 66 / 15%);
   border-radius: 5px;
 }
@@ -949,6 +946,11 @@ section:not(.latched)::before {
   .project__img {
     margin-top: 160px;
     width: 100%;
+  }
+
+  .profile__image {
+    top: -25px;
+    left: -22px;
   }
 }
 
