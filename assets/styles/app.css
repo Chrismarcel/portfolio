@@ -288,6 +288,7 @@ section:not(.latched)::before {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 .nav {
@@ -857,6 +858,7 @@ section:not(.latched)::before {
   .hero__content {
     flex-basis: 71%;
     justify-content: initial;
+    margin-bottom: unset;
   }
 
   .hero__text {
