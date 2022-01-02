@@ -525,6 +525,10 @@ section:not(.latched)::before {
   border-radius: 5px;
 }
 
+.tab__content {
+  margin-top: 20px;
+}
+
 .tab__content[data-active='false'] {
   display: none;
 }
@@ -989,6 +993,10 @@ section:not(.latched)::before {
 
   .tab__content-wrapper {
     margin-left: 30px;
+  }
+
+  .tab__content {
+    margin-top: unset;
   }
 
   .profile__links {
