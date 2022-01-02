@@ -172,7 +172,7 @@ section {
   z-index: 999;
   position: relative;
   min-height: 100vh;
-  padding: 70px 40px;
+  padding: 70px 25px;
 }
 
 .latched {
@@ -200,7 +200,7 @@ section:not(.latched)::before {
 }
 
 .hero {
-  padding: 40px;
+  padding: 40px 25px;
   color: #27374c;
   display: flex;
   flex-direction: column;
@@ -295,6 +295,7 @@ section:not(.latched)::before {
   z-index: 1000;
   width: 100%;
   transition: padding 400ms ease-out;
+  padding: 15px 25px;
 }
 
 .nav__inner {
@@ -368,7 +369,7 @@ section:not(.latched)::before {
   width: 7vw;
   position: relative;
   align-self: center;
-  background: #ffffff;
+  background: #27374c;
   display: inherit;
 }
 
@@ -450,16 +451,12 @@ section:not(.latched)::before {
 .profile__links {
   display: flex;
   margin-bottom: 60px;
-  margin-left: 20px;
+  justify-content: space-around;
 }
 
 .profile__link {
   position: relative;
   color: #3700ff;
-}
-
-.profile__link-item {
-  margin-right: 70px;
 }
 
 .profile__link::before {
@@ -487,7 +484,7 @@ section:not(.latched)::before {
 
 .profile__bio {
   line-height: 2.5rem;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 
 .profile__bio > p {
@@ -498,14 +495,14 @@ section:not(.latched)::before {
   width: 300px;
   height: 300px;
   background-image: linear-gradient(90deg, #3700ff, #ff0059);
-  align-self: flex-start;
+  align-self: center;
   border-radius: 10px;
   position: relative;
   margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 0;
+  margin-left: 20px;
 }
 
 .profile__image {
@@ -527,22 +524,29 @@ section:not(.latched)::before {
   border-radius: 5px;
 }
 
-.tab__content-wrapper {
-  margin-left: 30px;
-}
-
 .tab__content[data-active='false'] {
   display: none;
+}
+
+.tab__list {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
 }
 
 .tabs-wrapper {
   display: flex;
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 18px;
+  flex-direction: column;
 }
 
 .tabs__experience {
   margin-bottom: 80px;
+}
+
+.profile__experience {
+  margin-top: 40px;
 }
 
 .company-role {
@@ -565,7 +569,7 @@ section:not(.latched)::before {
 }
 
 .download-resume {
-  display: inline-block;
+  display: block;
 }
 
 .download-resume i {
@@ -574,9 +578,7 @@ section:not(.latched)::before {
 
 .tab__btn {
   padding: 15px 20px;
-  min-width: 180px;
   text-align: left;
-  margin-left: 10px;
   border-radius: 5px;
   font-size: 16px;
   font-family: 'Source Serif Pro';
@@ -584,6 +586,7 @@ section:not(.latched)::before {
   background: transparent;
   letter-spacing: 0.0185em;
   color: #27374c;
+  white-space: nowrap;
 }
 
 .tab__btn:hover {
@@ -597,7 +600,8 @@ section:not(.latched)::before {
 }
 
 .tab__item {
-  border-left: 4px solid #cbc9e5;
+  border-bottom: 4px solid #cbc9e5;
+  padding-bottom: 10px;
 }
 
 .tab__item[data-active='true'] {
@@ -620,7 +624,7 @@ section:not(.latched)::before {
   justify-content: center;
   margin-bottom: 40px;
   flex-direction: column;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
 }
 
 .project__img {
@@ -711,6 +715,7 @@ section:not(.latched)::before {
 
 .contact .profile__links {
   margin-top: 60px;
+  width: 100%;
 }
 
 .contact__info {
@@ -875,6 +880,7 @@ section:not(.latched)::before {
 
   .profile__experience {
     padding-left: 100px;
+    margin-top: initial;
   }
 
   .profile__description {
@@ -908,6 +914,7 @@ section:not(.latched)::before {
     max-width: 400px;
     height: 400px;
     margin-left: unset;
+    align-self: flex-start;
   }
 
   section {
@@ -932,6 +939,7 @@ section:not(.latched)::before {
 
   .project__img-card {
     flex-basis: 47%;
+    padding-bottom: 45px;
   }
 
   .project__details {
@@ -953,6 +961,53 @@ section:not(.latched)::before {
     top: -25px;
     left: -22px;
     max-width: 400px;
+  }
+
+  .tabs-wrapper {
+    flex-direction: initial;
+    font-size: 20px;
+  }
+
+  .tab__list {
+    display: initial;
+    width: initial;
+    overflow: initial;
+  }
+
+  .tab__item {
+    border-left: 4px solid #cbc9e5;
+    border-bottom: unset;
+    padding-left: 10px;
+    padding-bottom: unset;
+  }
+
+  .tab__btn {
+    min-width: 180px;
+  }
+
+  .tab__content-wrapper {
+    margin-left: 30px;
+  }
+
+  .profile__links {
+    justify-content: initial;
+    margin-left: 20px;
+  }
+
+  .contact .profile__links {
+    width: unset;
+  }
+
+  .profile__link-item {
+    margin-right: 70px;
+  }
+
+  .profile__bio {
+    margin-bottom: 90px;
+  }
+
+  .download-resume {
+    display: inline-block;
   }
 }
 
