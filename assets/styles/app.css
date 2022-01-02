@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Source Serif Pro', serif;
-  color: #27374c;
+  color: #17212e;
   background-color: #c3cbdc;
   background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
   font-size: 18px;
@@ -201,7 +201,7 @@ section:not(.latched)::before {
 
 .hero {
   padding: 40px 25px;
-  color: #27374c;
+  color: #17212e;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -350,7 +350,7 @@ section:not(.latched)::before {
 }
 
 .nav__link {
-  color: #27374c;
+  color: #17212e;
   position: relative;
   letter-spacing: 1px;
 }
@@ -370,7 +370,7 @@ section:not(.latched)::before {
   width: 7vw;
   position: relative;
   align-self: center;
-  background: #27374c;
+  background: #17212e;
   display: inherit;
 }
 
@@ -563,7 +563,7 @@ section:not(.latched)::before {
 }
 
 .company-name {
-  color: #8301c0;
+  color: #3700ff;
   border-bottom: 1px solid;
 }
 
@@ -590,7 +590,7 @@ section:not(.latched)::before {
   cursor: pointer;
   background: transparent;
   letter-spacing: 0.0185em;
-  color: #27374c;
+  color: #17212e;
   white-space: nowrap;
 }
 
@@ -832,7 +832,7 @@ section:not(.latched)::before {
   .nav__link::after {
     content: '';
     width: 0;
-    background: #27374c;
+    background: #17212e;
     position: absolute;
     bottom: -10px;
     height: 2px;
