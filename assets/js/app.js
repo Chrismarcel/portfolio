@@ -54,8 +54,7 @@ const observer = new IntersectionObserver(entries => {
       if (prevSection.dataset.wrapper) {
         prevSection.classList.add('latched')
       }
-    } 
-    else {
+    } else {
       prevSection.classList.remove('latched')
     }
   })
@@ -67,8 +66,10 @@ getNodesList('[data-wrapper="true"]').forEach(targetSection => {
 // End Section latching implementation
 
 // Handle navigation bar transition on scroll
+const deviceWidth = window.innerWidth
 window.onscroll = () => {
-  if (window.scrollY >= 0.7 * window.innerHeight) {
+  const offset = deviceWidth > 800 ? 0.7 : 0.08
+  if (window.scrollY >= offset * window.innerHeight) {
     selectElement('.nav').classList.add('sticky-nav')
   } else {
     selectElement('.nav').classList.remove('sticky-nav')
