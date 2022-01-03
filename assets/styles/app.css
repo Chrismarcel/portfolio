@@ -180,11 +180,11 @@ section {
 }
 
 #profile[data-latched='true'] {
-  top: -1000px;
+  top: -600px;
 }
 
 #hero[data-latched='true'] {
-  top: -400px;
+  top: -300px;
 }
 
 section:not([data-latched='true'])::before {
@@ -314,14 +314,14 @@ section:not([data-latched='true'])::before {
 
 .sticky-nav .logo {
   width: 40px;
-  transition: width 300ms ease-in;
+  transition: width 400ms ease-in;
 }
 
 .logo {
   width: 50px;
   align-self: flex-start;
   cursor: pointer;
-  transition: width 300ms ease-in;
+  transition: width 400ms ease-in;
 }
 
 .nav__menu {
@@ -451,7 +451,7 @@ section:not([data-latched='true'])::before {
 
 .profile__links {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   justify-content: space-around;
 }
 
@@ -491,7 +491,7 @@ section:not([data-latched='true'])::before {
 
 .profile__bio {
   line-height: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .profile__bio > p {
@@ -557,7 +557,7 @@ section:not([data-latched='true'])::before {
 }
 
 .profile__experience {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .company-role {
@@ -588,7 +588,7 @@ section:not([data-latched='true'])::before {
 }
 
 .tab__btn {
-  padding: 15px 20px;
+  padding: 15px;
   text-align: left;
   border-radius: 5px;
   font-size: 16px;
@@ -600,19 +600,21 @@ section:not([data-latched='true'])::before {
   white-space: nowrap;
 }
 
+.tab__btn:focus {
+  outline: 2px solid rgb(203, 201, 229, 0.3);
+}
+
 .tab__btn:hover {
   background: rgb(203, 201, 229, 0.3);
 }
 
 .tab__btn[data-active='true'] {
-  background: #3700ff;
-  color: #ffffff;
+  color: #3700ff;
   font-weight: 700;
 }
 
 .tab__item {
   border-bottom: 4px solid #cbc9e5;
-  padding-bottom: 10px;
 }
 
 .tab__item[data-active='true'] {
@@ -636,6 +638,10 @@ section:not([data-latched='true'])::before {
   margin-bottom: 40px;
   flex-direction: column;
   padding-bottom: 30px;
+}
+
+.project__img-card:last-child {
+  margin-bottom: 0;
 }
 
 .project__img {

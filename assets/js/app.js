@@ -40,8 +40,7 @@ selectElement('.credits').appendChild(copyrightYear)
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: [0, 0.2],
-  delay: 100
+  threshold: 0,
 }
 
 const observer = new IntersectionObserver(entries => {
