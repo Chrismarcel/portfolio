@@ -541,6 +541,17 @@ section:not([data-latched='true'])::before {
   display: flex;
   width: 100%;
   overflow: scroll;
+  position: relative;
+}
+
+.tab__indicator {
+  position: absolute;
+  height: 4px;
+  background: #3700ff;
+  border-radius: 5px;
+  bottom: 0;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  width: 160px;
 }
 
 .tabs-wrapper {
@@ -596,6 +607,8 @@ section:not([data-latched='true'])::before {
   letter-spacing: 0.0185em;
   color: #17212e;
   white-space: nowrap;
+  min-width: 160px;
+  text-align: center;
 }
 
 .tab__btn:focus {
@@ -613,10 +626,10 @@ section:not([data-latched='true'])::before {
 
 .tab__item {
   border-bottom: 4px solid #cbc9e5;
+  position: relative;
 }
 
 .tab__item[data-active='true'] {
-  border-color: #3700ff;
   transition: border 500ms ease-in;
 }
 
@@ -1004,6 +1017,7 @@ section:not([data-latched='true'])::before {
 
   .tab__btn {
     min-width: 180px;
+    text-align: left;
   }
 
   .tab__content-wrapper {
@@ -1038,6 +1052,14 @@ section:not([data-latched='true'])::before {
 
   .project__img-card:last-child {
     margin-bottom: 40px;
+  }
+
+  .tab__indicator {
+    height: 50px;
+    width: 4px;
+    top: 0;
+    bottom: unset;
+    width: unset;
   }
 }
 

@@ -15,6 +15,8 @@ const getSectionHeight = section => {
   return selectElement(`#${section}`).offsetHeight
 }
 
+const deviceWidth = window.innerWidth
+
 // Handle hamburger menu toggle
 selectElement('.hamburger').addEventListener('click', function() {
   const menuIsOpen = this.dataset.menu === 'open'
@@ -40,7 +42,7 @@ selectElement('.credits').appendChild(copyrightYear)
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0,
+  threshold: 0
 }
 
 const observer = new IntersectionObserver(entries => {
@@ -65,9 +67,8 @@ getNodesList('[data-latched]').forEach(targetSection => {
 // End Section latching implementation
 
 // Handle navigation bar transition on scroll
-const deviceWidth = window.innerWidth
 window.onscroll = () => {
-  const offset = deviceWidth > 800 ? 0.7 : 0.08
+  const offset = deviceWidth > 768 ? 0.7 : 0.08
   if (window.scrollY >= offset * window.innerHeight) {
     selectElement('.nav').classList.add('sticky-nav')
   } else {
@@ -88,50 +89,67 @@ const resetItemAtrribute = ({ targetNode, nodeList, attribute, value }) => {
   })
 }
 
-const onTabItemClick = (e, nodeList, tabsWrapper) => {
-  tabState.selectedTab = e.target.dataset.tab
-  e.target.setAttribute('aria-selected', true)
+const applyTabTransform = ({ index, tabWrapper, element, parentNode }) => {
+  let transform = `translateY(${index * 50}px)`
+  const tabIndicator = selectElement(`${tabWrapper} .tab__indicator`)
+
+  if (deviceWidth <= 768) {
+    const tabWidth = parentNode.offsetWidth
+    tabIndicator.style.width = `${tabWidth}px`
+    transform = `translateX(${index * tabWidth}px)`
+  }
+
+  tabIndicator.style.transform = `${transform}`
+}
+
+const onTabItemClick = ({ element, index, nodeList, tabsWrapper }) => {
+  tabState.selectedTab = element.target.dataset.tab
+  element.target.setAttribute('aria-selected', true)
   resetItemAtrribute({
-    targetNode: e.target,
+    targetNode: element.target,
     nodeList,
     value: false,
     attribute: 'aria-selected'
   })
 
-  e.target.setAttribute('data-active', true)
+  element.target.setAttribute('data-active', true)
   resetItemAtrribute({
-    targetNode: e.target,
+    targetNode: element.target,
     nodeList,
     value: false,
     attribute: 'data-active'
   })
 
-  e.target.parentNode.setAttribute('data-active', true)
+  const parentNode = element.target.parentNode
+  parentNode.setAttribute('data-active', true)
   resetItemAtrribute({
-    targetNode: e.target.parentNode,
+    targetNode: parentNode,
     nodeList: getNodesList('.tab__item'),
     value: false,
     attribute: 'data-active'
   })
 
+  const tabWrapper = `[data-tabs='${tabsWrapper}']`
   const selectedTab = tabState.selectedTab
-  const activeTabNode = selectElement(`[data-tabs='${tabsWrapper}'] .tab__content#${selectedTab}`)
+  const activeTabNode = selectElement(`${tabWrapper} .tab__content#${selectedTab}`)
   activeTabNode.setAttribute('data-active', true)
 
   resetItemAtrribute({
-    nodeList: getNodesList(`[data-tabs='${tabsWrapper}'] .tab__content`),
+    nodeList: getNodesList(`${tabWrapper} .tab__content`),
     targetNode: activeTabNode,
     value: false,
     attribute: 'data-active'
   })
+
+  applyTabTransform({ index, tabWrapper, element, parentNode })
 }
 
-getNodesList('.tabs__experience .tab__btn').forEach((tabItem, _, nodeList) =>
-  tabItem.addEventListener('click', (e) => onTabItemClick(e, nodeList, 'experiences-tabs'))
+getNodesList('.tabs__experience .tab__btn').forEach((tabItem, index, nodeList) =>
+  tabItem.addEventListener('click', e => onTabItemClick({ element: e, index, nodeList, tabsWrapper: 'experiences-tabs' }))
 )
 
-getNodesList('.tabs__tools .tab__btn').forEach((tabItem, _, nodeList) =>
-  tabItem.addEventListener('click', e => onTabItemClick(e, nodeList, 'tools-tabs'))
+getNodesList('.tabs__tools .tab__btn').forEach((tabItem, index, nodeList) =>
+  tabItem.addEventListener('click', e => onTabItemClick({ element: e, index, nodeList, tabsWrapper: 'tools-tabs' }))
 )
 
 window.addEventListener('load', () => {
