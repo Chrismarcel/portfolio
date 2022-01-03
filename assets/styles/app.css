@@ -318,7 +318,7 @@ section:not([data-latched='true'])::before {
 }
 
 .logo__wrapper {
-  display: block;
+  display: flex;
 }
 
 .logo {
@@ -1050,7 +1050,7 @@ section:not([data-latched='true'])::before {
 
   .hamburger[data-menu='open'] + .nav__menu li.aos-animate {
     transition-property: all;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in-out;
     left: 0;
     transition-duration: 400ms;
     opacity: 1;
