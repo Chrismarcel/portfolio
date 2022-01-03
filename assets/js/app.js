@@ -51,16 +51,16 @@ const observer = new IntersectionObserver(entries => {
     } = entry
 
     if (entry.isIntersecting) {
-      if (prevSection.dataset.wrapper) {
-        prevSection.classList.add('latched')
+      if (prevSection.dataset.latched) {
+        prevSection.dataset.latched = true
       }
     } else {
-      prevSection.classList.remove('latched')
+      prevSection.dataset.latched = false
     }
   })
 }, observerOptions)
 
-getNodesList('[data-wrapper="true"]').forEach(targetSection => {
+getNodesList('[data-latched]').forEach(targetSection => {
   observer.observe(targetSection)
 })
 // End Section latching implementation

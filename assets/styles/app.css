@@ -175,19 +175,19 @@ section {
   padding: 70px 25px;
 }
 
-.latched {
+[data-latched='true'] {
   position: sticky;
 }
 
-#profile.latched {
+#profile[data-latched='true'] {
   top: -1000px;
 }
 
-#hero.latched {
+#hero[data-latched='true'] {
   top: -400px;
 }
 
-section:not(.latched)::before {
+section:not([data-latched='true'])::before {
   content: '';
   width: 100%;
   top: -7px;
@@ -252,7 +252,7 @@ section:not(.latched)::before {
   width: 100%;
   font-size: 2.2vh;
   line-height: 2;
-  text-align: justify;
+  text-align: left;
   letter-spacing: 0.02em;
   margin-bottom: 20px;
   letter-spacing: normal;
@@ -260,7 +260,7 @@ section:not(.latched)::before {
 }
 
 .hero__text.hero__text--lg {
-  font-size: 39px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 15px;
@@ -451,25 +451,31 @@ section:not(.latched)::before {
 
 .profile__links {
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   justify-content: space-around;
 }
 
 .profile__link {
   position: relative;
   color: #3700ff;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile__link::before {
   content: '';
-  width: 50px;
-  height: 50px;
+  width: inherit;
+  height: inherit;
   border: 3px solid #3700ff;
   display: block;
   border-radius: 50%;
   position: absolute;
-  bottom: -12px;
-  left: -16px;
+  bottom: -3px;
+  left: -3px;
   opacity: 1;
   transition: all 450ms ease-in-out;
 }
@@ -485,7 +491,7 @@ section:not(.latched)::before {
 
 .profile__bio {
   line-height: 2.5rem;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .profile__bio > p {
@@ -719,7 +725,7 @@ section:not(.latched)::before {
 }
 
 .contact .profile__links {
-  margin-top: 60px;
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -893,11 +899,11 @@ section:not(.latched)::before {
     flex-direction: initial;
   }
 
-  #profile.latched {
+  #profile[data-latched='true'] {
     top: -190px;
   }
 
-  #hero.latched {
+  #hero[data-latched='true'] {
     top: unset;
   }
 
@@ -917,6 +923,7 @@ section:not(.latched)::before {
   }
 
   .profile__image-wrapper {
+    width: 100%;
     max-width: 400px;
     height: 400px;
     margin-left: unset;
@@ -1002,10 +1009,12 @@ section:not(.latched)::before {
   .profile__links {
     justify-content: initial;
     margin-left: 20px;
+    margin-bottom: 60px;
   }
 
   .contact .profile__links {
     width: unset;
+    margin-top: 60px;
   }
 
   .profile__link-item {
