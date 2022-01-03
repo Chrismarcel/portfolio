@@ -1035,6 +1035,10 @@ section:not([data-latched='true'])::before {
   .download-resume {
     display: inline-block;
   }
+
+  .project__img-card:last-child {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
