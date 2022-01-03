@@ -1059,7 +1059,6 @@ section:not([data-latched='true'])::before {
     width: 4px;
     top: 0;
     bottom: unset;
-    width: unset;
   }
 }
 
