@@ -317,6 +317,10 @@ section:not([data-latched='true'])::before {
   transition: width 400ms ease-in;
 }
 
+.logo__wrapper {
+  display: block;
+}
+
 .logo {
   width: 50px;
   align-self: flex-start;
@@ -336,17 +340,16 @@ section:not([data-latched='true'])::before {
   right: 0;
   left: 0;
   font-size: 4vw;
-  opacity: 0;
   z-index: -1;
-  z-index: 10000;
+  height: 100vh;
 }
 
 .nav__menu li {
   align-self: flex-end;
   font-weight: bold;
   position: relative;
-  right: 20vw;
-  transition: all 400ms ease-out;
+  left: 100vw;
+  opacity: 0;
 }
 
 .nav__link {
@@ -417,10 +420,9 @@ section:not([data-latched='true'])::before {
 
 .hamburger[data-menu='open'] + .nav__menu {
   display: flex;
-  padding: 25px;
+  padding: 80px 25px;
   opacity: 1;
   z-index: 10;
-  height: 100vh;
 }
 
 .hamburger[data-menu='open'] > span:nth-child(1) {
@@ -437,11 +439,6 @@ section:not([data-latched='true'])::before {
 .hamburger[data-menu='open'] > span:nth-child(3) {
   transform: rotate(-45deg);
   bottom: 2px;
-}
-
-.hamburger[data-menu='open'] + .nav__menu li {
-  right: 0;
-  transition: all 400ms ease-out;
 }
 
 /* Styles for the profile section */
@@ -601,7 +598,7 @@ section:not([data-latched='true'])::before {
 }
 
 .tab__btn:focus {
-  outline: 2px solid rgb(203, 201, 229, 0.3);
+  outline: 2px solid transparent;
 }
 
 .tab__btn:hover {
@@ -830,10 +827,12 @@ section:not([data-latched='true'])::before {
     font-size: initial;
     flex-direction: initial;
     justify-content: space-between;
+    z-index: 10000;
+    height: initial;
   }
 
   .nav__menu li {
-    right: 0;
+    left: 0;
   }
 
   .nav__link {
@@ -910,7 +909,7 @@ section:not([data-latched='true'])::before {
   }
 
   #hero[data-latched='true'] {
-    top: unset;
+    top: 0;
   }
 
   .contact__details {
@@ -1014,7 +1013,6 @@ section:not([data-latched='true'])::before {
 
   .profile__links {
     justify-content: initial;
-    margin-left: 20px;
     margin-bottom: 60px;
   }
 
@@ -1033,6 +1031,42 @@ section:not([data-latched='true'])::before {
 
   .download-resume {
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    transition: left ease-out 400ms;
+    left: 100vw;
+  }
+
+  .hamburger[data-menu='open'] + .nav__menu {
+    transition: left ease-in-out 400ms;
+    left: 0;
+  }
+
+  .hamburger[data-menu='open'] + .nav__menu li.aos-animate {
+    transition-property: all;
+    transition-timing-function: ease-in;
+    left: 0;
+    transition-duration: 400ms;
+    opacity: 1;
+  }
+
+  .hamburger[data-menu='open'] + .nav__menu li.aos-animate:first-child {
+    transition-delay: 300ms;
+  }
+
+  .hamburger[data-menu='open'] + .nav__menu li.aos-animate:nth-child(2) {
+    transition-delay: 400ms;
+  }
+
+  .hamburger[data-menu='open'] + .nav__menu li.aos-animate:nth-child(3) {
+    transition-delay: 500ms;
+  }
+
+  .hamburger[data-menu='open'] + .nav__menu li.aos-animate:last-child {
+    transition-delay: 600ms;
   }
 }
 

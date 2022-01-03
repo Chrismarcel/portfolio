@@ -127,7 +127,7 @@ const onTabItemClick = (e, nodeList, tabsWrapper) => {
 }
 
 getNodesList('.tabs__experience .tab__btn').forEach((tabItem, _, nodeList) =>
-  tabItem.addEventListener('click', e => onTabItemClick(e, nodeList, 'experiences-tabs'))
+  tabItem.addEventListener('click', (e) => onTabItemClick(e, nodeList, 'experiences-tabs'))
 )
 
 getNodesList('.tabs__tools .tab__btn').forEach((tabItem, _, nodeList) =>
