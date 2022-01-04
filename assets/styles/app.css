@@ -799,12 +799,13 @@ section:not([data-latched='true'])::before {
 .skills-tag__wrapper span {
   display: inline-block;
   margin-right: 8px;
-  font-size: 12px;
+  font-size: 11px;
   background: #815fff;
   color: #ffffff;
-  padding: 6px 15px;
-  border-radius: 22px;
+  padding: 4px 15px;
+  border-radius: 26px;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 @media only screen and (min-width: 420px) {
