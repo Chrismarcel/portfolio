@@ -16,6 +16,7 @@ const getSectionHeight = section => {
 }
 
 const deviceWidth = window.innerWidth
+const isMobileDevice = deviceWidth <= 768
 
 // Handle hamburger menu toggle
 selectElement('.hamburger').addEventListener('click', function() {
@@ -68,7 +69,7 @@ getNodesList('[data-latched]').forEach(targetSection => {
 
 // Handle navigation bar transition on scroll
 window.onscroll = () => {
-  const offset = deviceWidth > 768 ? 0.7 : 0.08
+  const offset = isMobileDevice ? 0.08 : 0.7
   if (window.scrollY >= offset * window.innerHeight) {
     selectElement('.nav').classList.add('sticky-nav')
   } else {
@@ -93,7 +94,7 @@ const applyTabTransform = ({ index, tabWrapper, element, parentNode }) => {
   let transform = `translateY(${index * 50}px)`
   const tabIndicator = selectElement(`${tabWrapper} .tab__indicator`)
 
-  if (deviceWidth <= 768) {
+  if (isMobileDevice) {
     const tabWidth = parentNode.offsetWidth
     tabIndicator.style.width = `${tabWidth}px`
     transform = `translateX(${index * tabWidth}px)`
@@ -152,8 +153,30 @@ getNodesList('.tabs__tools .tab__btn').forEach((tabItem, index, nodeList) =>
   tabItem.addEventListener('click', e => onTabItemClick({ element: e, index, nodeList, tabsWrapper: 'tools-tabs' }))
 )
 
+const applyMobileAnimations = () => {
+  // Replace profile picture animation
+  const profileImageElement = selectElement('.profile__image')
+  profileImageElement.classList.add('aos-animate')
+  profileImageElement.dataset.aosDelay = 2600
+
+  const heroCTABtn = selectElement('.hero-cta')
+  heroCTABtn.classList.add('aos-animate')
+
+  selectElement('.profile__bio').dataset.aosDelay = 1100
+  selectElement('.profile__links').dataset.aosDelay = 200
+  selectElement('.profile__links').dataset.aosOffset = 10
+  selectElement('.download-resume').dataset.aosDelay = 400
+  selectElement('.tabs__experience').dataset.aosDelay = 1100
+  selectElement('#tools-experience-header').dataset.aosDelay = 500
+  selectElement('#tools-experience-header').dataset.aosOffset = 10
+  selectElement('.tabs__tools').dataset.aosDelay = 300
+}
+
 window.addEventListener('load', () => {
   document.body.style.overflow = 'hidden'
+  if (isMobileDevice) {
+    applyMobileAnimations()
+  }
   new Promise(resolve => {
     setTimeout(() => {
       selectElement('#preloader').classList.add('done')
