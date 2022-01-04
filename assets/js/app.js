@@ -170,6 +170,8 @@ const applyMobileAnimations = () => {
   selectElement('#tools-experience-header').dataset.aosDelay = 500
   selectElement('#tools-experience-header').dataset.aosOffset = 10
   selectElement('.tabs__tools').dataset.aosDelay = 300
+
+  getNodesList('.project__img-card').forEach(node => (node.dataset.aosDelay = 800))
 }
 
 window.addEventListener('load', () => {
