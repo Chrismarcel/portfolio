@@ -694,6 +694,8 @@ section:not([data-latched='true'])::before {
   font-weight: 600;
   color: #3700ff;
   border-bottom: 1px solid;
+  margin-top: 20px;
+  display: inline-block;
 }
 
 #rivella {
@@ -730,7 +732,7 @@ section:not([data-latched='true'])::before {
 
 .contact__details {
   margin-top: 30px;
-  line-height: 3rem;
+  line-height: 2.5rem;
   font-size: 20px;
 }
 
@@ -787,6 +789,22 @@ section:not([data-latched='true'])::before {
 
 .credits i {
   color: #ff9d00;
+}
+
+.skills-tag__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-tag__wrapper span {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 12px;
+  background: #815fff;
+  color: #ffffff;
+  padding: 6px 15px;
+  border-radius: 22px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 420px) {
@@ -932,6 +950,7 @@ section:not([data-latched='true'])::before {
     font-size: 30px;
     margin-top: 70px;
     max-width: 70%;
+    line-height: 3rem;
   }
 
   .contact__info {
