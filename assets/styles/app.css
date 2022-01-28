@@ -659,6 +659,10 @@ section:not([data-latched='true'])::before {
   top: -3px;
 }
 
+.tabs__tools .tab__content-wrapper {
+  margin-left: 15px;
+}
+
 .projects__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -1067,10 +1071,6 @@ section:not([data-latched='true'])::before {
 
   .tab__content-wrapper {
     margin-left: 30px;
-  }
-
-  .tabs__tools .tab__content-wrapper {
-    margin-left: 15px;
   }
 
   .tab__content {
