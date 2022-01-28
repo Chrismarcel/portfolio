@@ -483,7 +483,8 @@ section:not([data-latched='true'])::before {
   flex-direction: column;
 }
 
-.profile__bio__wrapper {
+.profile__bio__wrapper,
+.profile__experience {
   flex-basis: 50%;
 }
 
@@ -588,6 +589,16 @@ section:not([data-latched='true'])::before {
   color: #000000;
 }
 
+.role__description {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+.role__description p {
+  margin-bottom: 10px;
+}
+
 .download-resume {
   display: block;
 }
@@ -645,7 +656,6 @@ section:not([data-latched='true'])::before {
   border-radius: 10px;
   box-shadow: 6px 11px 30px rgba(7, 33, 66, 0.07);
   display: flex;
-  justify-content: center;
   margin-bottom: 40px;
   flex-direction: column;
   padding-bottom: 30px;
@@ -710,8 +720,8 @@ section:not([data-latched='true'])::before {
   background-image: url(/assets/images/projects/ticino-bg.png);
 }
 
-#we-support {
-  background-image: url(/assets/images/projects/wesupport-bg.png);
+#dairynomics {
+  background-image: url(/assets/images/projects/dairynomics-bg.png);
 }
 
 #freshland {
@@ -966,7 +976,7 @@ section:not([data-latched='true'])::before {
   .profile__image-wrapper {
     width: 100%;
     max-width: 400px;
-    height: 400px;
+    height: 430px;
     margin-left: unset;
     align-self: flex-start;
   }
