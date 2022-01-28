@@ -644,6 +644,25 @@ section:not([data-latched='true'])::before {
   transition: border 500ms ease-in;
 }
 
+.tab__content .tools {
+  margin-top: 10px;
+}
+
+.tab__content .tools .tool {
+  position: relative;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.tab__content .tools .tool::before {
+  content: '▹';
+  font-size: 20px;
+  position: absolute;
+  color: #000000;
+  margin-left: -15px;
+  top: -3px;
+}
+
 .projects__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -947,6 +966,10 @@ section:not([data-latched='true'])::before {
 
   .profile__description {
     flex-direction: initial;
+  }
+
+  .tabs__tools .tab__content-wrapper {
+    margin-left: 45px;
   }
 
   #profile[data-latched='true'] {
