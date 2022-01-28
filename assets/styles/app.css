@@ -179,10 +179,6 @@ section {
   position: sticky;
 }
 
-#profile[data-latched='true'] {
-  top: -700px;
-}
-
 #hero[data-latched='true'] {
   top: -300px;
 }
@@ -563,7 +559,7 @@ section:not([data-latched='true'])::before {
 }
 
 .tabs__experience {
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 }
 
 .profile__experience {
@@ -972,10 +968,6 @@ section:not([data-latched='true'])::before {
     margin-left: 45px;
   }
 
-  #profile[data-latched='true'] {
-    top: -190px;
-  }
-
   #hero[data-latched='true'] {
     top: 0;
   }
@@ -1077,8 +1069,16 @@ section:not([data-latched='true'])::before {
     margin-left: 30px;
   }
 
+  .tabs__tools .tab__content-wrapper {
+    margin-left: 15px;
+  }
+
   .tab__content {
     margin-top: unset;
+  }
+
+  .tabs__experience {
+    margin-bottom: 80px;
   }
 
   .profile__links {

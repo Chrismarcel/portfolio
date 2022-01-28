@@ -18,6 +18,13 @@ const getSectionHeight = section => {
 const deviceWidth = window.innerWidth
 const isMobileDevice = deviceWidth <= 768
 
+//  Define vertical paddings for each section
+// To improve this, we might need to calculate the padding via getBoundingClientRect
+const SECTIONS_PADDING_Y = {
+  DESKTOP: 80,
+  MOBILE: 25
+}
+
 // Handle hamburger menu toggle
 selectElement('.hamburger').addEventListener('click', function() {
   const menuIsOpen = this.dataset.menu === 'open'
@@ -53,11 +60,22 @@ const observer = new IntersectionObserver(entries => {
     } = entry
 
     if (entry.isIntersecting) {
+      if (prevSection.id === SECTIONS.PROFILE) {
+        const sectionPaddingY = isMobileDevice ? SECTIONS_PADDING_Y.MOBILE : SECTIONS_PADDING_Y.DESKTOP
+        // We need to add the bottom padding of the previous section and the top padding of the intersecting section
+        // The offset is required to prevent jumpy effect when latching occurs
+        const offsetTop = prevSection.offsetHeight - window.innerHeight + sectionPaddingY * 2
+        prevSection.style.top = `-${offsetTop}px`
+      }
+
       if (prevSection.dataset.latched) {
         prevSection.dataset.latched = true
       }
     } else {
       prevSection.dataset.latched = false
+      if (prevSection.id === SECTIONS.PROFILE) {
+        prevSection.style.top = `0px`
+      }
     }
   })
 }, observerOptions)
