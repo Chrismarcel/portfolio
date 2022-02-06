@@ -86,13 +86,17 @@ getNodesList('[data-latched]').forEach(targetSection => {
 // End Section latching implementation
 
 // Handle navigation bar transition on scroll
-window.onscroll = () => {
+const handleNavbarOnScroll = () => {
   const offset = isMobileDevice ? 0.08 : 0.7
   if (window.scrollY >= offset * window.innerHeight) {
     selectElement('.nav').classList.add('sticky-nav')
   } else {
     selectElement('.nav').classList.remove('sticky-nav')
   }
+}
+
+window.onscroll = () => {
+  handleNavbarOnScroll()
 }
 
 // Work Experience & Skillst Tab implementation
@@ -108,7 +112,7 @@ const resetItemAtrribute = ({ targetNode, nodeList, attribute, value }) => {
   })
 }
 
-const applyTabTransform = ({ index, tabWrapper, element, parentNode }) => {
+const applyTabTransform = ({ index, tabWrapper, parentNode }) => {
   let transform = `translateY(${index * 50}px)`
   const tabIndicator = selectElement(`${tabWrapper} .tab__indicator`)
 
@@ -160,16 +164,21 @@ const onTabItemClick = ({ element, index, nodeList, tabsWrapper }) => {
     attribute: 'data-active'
   })
 
-  applyTabTransform({ index, tabWrapper, element, parentNode })
+  applyTabTransform({ index, tabWrapper, parentNode })
 }
 
 getNodesList('.tabs__experience .tab__btn').forEach((tabItem, index, nodeList) =>
   tabItem.addEventListener('click', e => onTabItemClick({ element: e, index, nodeList, tabsWrapper: 'experiences-tabs' }))
 )
 
-getNodesList('.tabs__tools .tab__btn').forEach((tabItem, index, nodeList) =>
-  tabItem.addEventListener('click', e => onTabItemClick({ element: e, index, nodeList, tabsWrapper: 'tools-tabs' }))
-)
+getNodesList('.tabs__tools .tab__btn').forEach((tabItem, index, nodeList) => {
+  tabItem.addEventListener('click', e => {
+    if (isMobileDevice) {
+      window.scrollTo(0, 1800)
+    }
+    onTabItemClick({ element: e, index, nodeList, tabsWrapper: 'tools-tabs' })
+  })
+})
 
 const applyMobileAnimations = () => {
   // Replace profile picture animation
