@@ -11,6 +11,11 @@ const SECTIONS = {
   CONTACT: 'contact'
 }
 
+const sectionEl = {
+  profileSection: selectElement(`#${SECTIONS.PROFILE}`),
+  projectSection: selectElement(`#${SECTIONS.PROJECTS}`)
+}
+
 const getSectionHeight = section => {
   return selectElement(`#${section}`).offsetHeight
 }
@@ -22,7 +27,7 @@ const isMobileDevice = deviceWidth <= 768
 // To improve this, we might need to calculate the padding via getBoundingClientRect
 const SECTIONS_PADDING_Y = {
   DESKTOP: 80,
-  MOBILE: 25
+  MOBILE: 70
 }
 
 // Handle hamburger menu toggle
@@ -173,10 +178,15 @@ getNodesList('.tabs__experience .tab__btn').forEach((tabItem, index, nodeList) =
 
 getNodesList('.tabs__tools .tab__btn').forEach((tabItem, index, nodeList) => {
   tabItem.addEventListener('click', e => {
-    if (isMobileDevice) {
-      window.scrollTo(0, 1800)
-    }
     onTabItemClick({ element: e, index, nodeList, tabsWrapper: 'tools-tabs' })
+    if (isMobileDevice) {
+      const { projectSection } = sectionEl
+      const projectSectionScrolled = window.scrollY + window.innerHeight - projectSection.offsetTop
+      if (projectSectionScrolled > 0) {
+        sectionEl.profileSection.dataset.latched = false
+        sectionEl.profileSection.style.top = '0px'
+      }
+    }
   })
 })
 
